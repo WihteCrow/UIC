@@ -1,0 +1,69 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##面包屑导航
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - 普通的面包屑导航
+            - 最后一个导航链接下拉可以显示更多的导航地址
+    .example
+        ul.breadcrumb
+          li
+            a(href='#') 首页
+          li
+            a(href='#') 智能推广
+          li
+            a(href='#') 1号引擎
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="#">智能推广</a>
+                        </li>
+                        <li class="">
+                            <a href="#">1 号引擎</a>
+                        </li>
+                    </ul>
+    .example
+        ul.breadcrumb
+          li
+            a(href='#') 首页
+          li
+            a(href='#') 智能推广
+          li.dropdown-breadcrumb
+            a(href='#') 1号引擎
+            ul.dropdown-breadcrumb-menu
+                li
+                    a(href="#") 下拉导航1
+                li
+                    a(href="#") 下拉导航2
+                li
+                    a(href="#") 下拉导航3
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="#">智能推广</a>
+                        </li>
+                        <li class="dropdown-breadcrumb">
+                            <a href="#">1 号引擎,下拉显示更多引擎</a>
+                            <ul class="dropdown-dreadcrumb-menu">
+                                <li><a href="#">下拉导航1</a></li>
+                                <li><a href="#">下拉导航2</a></li>
+                                <li><a href="#">下拉导航3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+

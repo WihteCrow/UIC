@@ -1,0 +1,53 @@
+/**
+ * @fileOverview
+ * @author Crow
+ * @version 0.0.1
+ * @time 2015/7/27
+ */
+
+.example{
+  position: relative;
+  padding: 45px 15px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  margin-top: 10px;
+  clear: both;
+  &.select {
+    padding-top: 15px;
+    min-height: 200px;
+  }
+  .example-block{
+    margin-bottom: 10px;
+  }
+  .example-inline {
+    margin-bottom: 10px;
+    &> * {
+      margin-right: 10px;
+    }
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .row {
+    margin-bottom: 20px;
+    min-height: 50px;
+  }
+  .media {
+    margin-bottom: 10px;
+  }
+  nav {
+    margin-bottom: 30px;
+  }
+  .pagination {
+    margin-bottom: 10px;
+  }
+}
+// TODO 测试用
+.table-test {
+  th, td {
+    width: 150px;
+    height: 50px;
+  }
+}
+

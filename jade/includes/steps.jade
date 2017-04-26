@@ -1,0 +1,78 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ## 步骤条
+.doc-section
+    .markdown-body
+        :markdown
+            ### 类型
+            - `默认样式`
+
+
+    .example
+        .steps-round
+            .finished
+                .wrap
+                    .round 1
+                    .progress
+                        .progress-bar.progress-bar-success.progress-bar-stripe.active(style="width: 100%;")
+                span 文字描述
+            .finished
+                .wrap
+                    .round 2
+                    .progress
+                        .progress-bar.progress-bar-success.progress-bar-stripe.active(style="width: 100%;")
+                span 文字描述
+            .todo
+                .wrap
+                    .round 3
+                    .progress
+                        .progress-bar.progress-bar-primary(style="width: auto;")
+                span 文字描述
+             .todo.last
+                .wrap
+                    .round 4
+                span 文字描述
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <div class="steps-round">
+                        <div clas="finished">
+                            <div class="wrap">
+                                <div class="round">1</div>
+                                <div class="progress">
+                                    <div style="width: 100%" class="progress-bar progress-bar-success progress-bar-stripe"></div>
+                                </div>
+                            </div>
+                            <span>文字描述</span>
+
+                        </div>
+                        <div clas="finished">
+                            <div class="wrap">
+                                <div class="round">2</div>
+                                <div class="progress">
+                                    <div style="width: 100%" class="progress-bar progress-bar-success progress-bar-stripe"></div>
+                                </div>
+                            </div>
+                            <span>文字描述</span>
+                        </div>
+                        <div clas="todo">
+                            <div class="wrap">
+                                <div class="round">3</div>
+                                <div class="progress">
+                                    <div style="width: 100%" class="progress-bar progress-bar-success progress-bar-stripe"></div>
+                                </div>
+                            </div>
+                            <span>文字描述</span>
+                        </div>
+                        <div clas="todo last">
+                            <div class="wrap">
+                                <div class="round">4</div>
+                                <div class="progress">
+                                    <div style="width: 100%" class="progress-bar progress-bar-success progress-bar-stripe"></div>
+                                </div>
+                            </div>
+                            <span>文字描述</span>
+                        </div>
+                    </div>

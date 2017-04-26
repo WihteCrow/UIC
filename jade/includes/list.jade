@@ -1,0 +1,72 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##列表
+            `uic-list`列表具有以下属性
+
+            1. 边框，**默认：**无边框
+            2. 鼠标`hover`背景色改变，**默认：**无变色
+            3. 隔行换色，**默认：**没有换色
+            4. 禁止
+
+
+.doc-section
+    .markdown-body
+        :markdown
+            ###边框
+            - 无边框
+            - `uic-list-border-item`只有元素有地边框
+            - `uic-list-border`有边框
+
+            ###变色
+            - 无变色
+            - `uic-list-hover`
+
+            ###隔行换色
+            - `uic-list-even` 偶数行
+            - `uic-list-odd` 奇数行
+
+            ###禁止
+            这个`class`作用于`item`上
+            - `disable` 偶数行
+    .example
+        ul.uic-list
+            each val in [1,2,3,4]
+                li.uic-list-item=val
+        .btn-group
+            .btn.btn-primary 无边框
+            .btn.btn-primary 元素边框
+            .btn.btn-primary 盒子边框
+        .btn.btn-primary hover色
+        .btn-group
+            .btn.btn-primary 隔行换色（偶数）
+            .btn.btn-primary 隔行换色（奇数）
+        .btn.btn-primary 禁止
+
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <ul class="uic-list">
+                        <li class="uic-list-item">1</li>
+                        // ...
+                    </ul>
+                    <ul class="uic-list uic-list-border-item">
+                        <li class="uic-list-item">1</li>
+                        // ...
+                    </ul>
+                    <ul class="uic-list uic-list-border">
+                        <li class="uic-list-item">1</li>
+                        // ...
+                    </ul>
+                    <ul class="uic-list uic-list-border uic-list-hover">
+                        // ...
+                    </ul>
+                    <ul class="uic-list uic-list-border uic-list-hover uic-list-even">
+                        // ...
+                    </ul>
+                    <ul class="uic-list uic-list-border uic-list-hover uic-list-even">
+                        <li class="uic-list-item disabled"></li>
+                        // ...
+                    </ul>
+

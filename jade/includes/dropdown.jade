@@ -1,0 +1,145 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##下拉
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - 下拉菜单
+            - 按钮式下拉
+            - 分裂式按钮下拉
+            -  下拉图标为 icon
+
+    .example
+        .dropup
+            a.btn.btn-link.dropdown-toggle(type="button" data-toggle="dropdown") 下拉菜单
+                span.arrow-down-primary
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+        .dropdown
+            button.btn.btn-primary.dropdown-toggle(type="button" data-toggle="dropdown") 下拉菜单
+                span.arrow-up-primary
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+        .btn-group
+            button.btn.btn-primary.dropdown-toggle(type="button" data-toggle="dropdown") 按钮式下拉
+                span.arrow-down-primary
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+        .btn-group
+            button.btn.btn-danger(type="button") 分裂式按钮下拉
+            button.btn.btn-danger.dropdown-toggle(type="button" data-toggle="dropdown")
+                span.arrow-down-white
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+        .btn-group
+            button.btn.btn-warn(type="button") 分裂式按钮下拉
+            button.btn.btn-warn.dropdown-toggle(type="button" data-toggle="dropdown")
+                span.arrow-down-white
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+        .btn-group
+            button.btn.btn-warn(type="button") 分裂式按钮下拉
+            button.btn.btn-warn.dropdown-toggle(type="button" data-toggle="dropdown")
+                span.ui-icon.icon-pc-chevron-bottom
+            ul.dropDown-menu
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+                li
+                    a(href="#") 下拉菜单一
+
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    //- 下拉菜单
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">下拉按钮
+                            <span class="arrow-down-primary"></span>
+                        </button>
+                        <ul class="dropDown-menu">
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropup">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">下拉按钮
+                            <span class="arrow-up-primary"></span>
+                        </button>
+                        <ul class="dropDown-menu">
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                            <li><a href="#">下拉菜单一</a></li>
+                        </ul>
+                    </div>
+                    //- 按钮式下拉
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        按钮下拉 <span class="arrow-down-primary"></span>
+                      </button>
+                      <ul class="dropDown-menu">
+                        <li><a href="#">按钮下拉</a></li>
+                        <li><a href="#">按钮下拉</a></li>
+                        <li><a href="#">按钮下拉</a></li>
+                        <li><a href="#">按钮下拉</a></li>
+                      </ul>
+                    </div>
+                    //- 分裂式按钮下拉
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-danger">分裂式按钮下拉</button>
+                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                        <span class="arrow-down-white"></span>
+                      </button>
+                      <ul class="dropDown-menu">
+                        <li><a href="#">分裂式</a></li>
+                        <li><a href="#">分裂式</a></li>
+                        <li><a href="#">分裂式</a></li>
+                        <li><a href="#">分裂式</a></li>
+                      </ul>
+                    </div>
+
+
+

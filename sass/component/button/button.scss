@@ -1,0 +1,137 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "../../mixins/utils";
+@import "variables";
+@import "mixins";
+
+$button-type: (primary, $btn-primary),
+        (info, $btn-info),
+        (secondary, $btn-secondary),
+        (success, $btn-success),
+        (warn, $btn-warn),
+        (danger, $btn-danger),
+        (link, $btn-link);
+
+$button-size: (lg, $btn-lg), (md, $btn-md), (sm, $btn-sm);
+
+// 按钮组
+.btn-group {
+  .btn {
+    float: left;
+    @include border-radius(0);
+    margin-left: -1px;
+  }
+
+  .btn:first-child {
+    margin-left: 0;
+    border-top-left-radius: $btn-border-radius;
+    border-bottom-left-radius: $btn-border-radius;
+  }
+  .btn:last-child {
+    border-top-right-radius: $btn-border-radius;
+    border-bottom-right-radius: $btn-border-radius;
+  }
+
+  &.btn-spacing {
+    .btn {
+      margin-left: 0;
+      @include border-radius($btn-border-radius);
+      margin-right: $btn-spacing;
+    }
+    @include clearfix;
+  }
+  @include clearfix;
+}
+
+.btn {
+  margin: 0;
+  position: relative;
+  font-family: $font-family;
+  font-weight: normal;
+  color: $base-withe;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+  text-align: center; //这个属性没必要用，因为是 padding//还是要的，为了避免有的人写的固定宽度
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0;
+  @include border-radius($btn-border-radius);
+  @include user-select-none();
+  @include inline-block();
+  // 默认大小
+  @include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size-base, $btn-line-height);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// 按钮尺寸
+@each $type, $obj in $button-size {
+  .btn.btn-#{$type} {
+    @include button-size(map_get($obj, vertical),
+            map_get($obj, horizontal),
+            map_get($obj, fz),
+            map_get($obj, lh));
+  }
+}
+
+// 按钮类型
+@each $type, $obj in $button-type {
+  $default: map_get($obj, default);
+  .btn.btn-#{$type} {
+    @include btn-skin(map_get($default, bg-color),
+            map_get($default, bd-color),
+            map_get($default, ft-color));
+
+    &.active, &:hover, &:active, &:focus {
+      // 没有定义hover 统一加深 5%
+      @if (map_has_key($obj, hover)) {
+        $hover: map_get($obj, hover);
+        @include btn-skin(map_get($hover, bg-color),
+                map_get($hover, bd-color),
+                map_get($hover, ft-color));
+      } @else {
+        @include btn-skin(darken(map_get($default, bg-color), 5%),
+                darken(map_get($default, bd-color), 5%),
+                map_get($default, ft-color));
+      }
+    }
+    @include disabled();
+  }
+}
+
+// 按钮组类型
+@each $type, $obj in $button-type {
+  $default: map_get($obj, default);
+  .btn-group.btn-#{$type} {
+    .btn {
+      &.active, &:hover, &:active, &:focus {
+        // 没有定义hover 统一加深 5%
+        $border-color: null;
+        @if (map_has_key($obj, hover)) {
+          $hover: map_get($obj, hover);
+          $border-color: map_get($hover, bd-color);
+          @include btn-skin(map_get($hover, bg-color),
+                  map_get($hover, bd-color),
+                  map_get($hover, ft-color));
+        } @else {
+          $border-color: darken(map_get($default, bd-color), 5%);
+          @include btn-skin(darken(map_get($default, bg-color), 5%),
+                  darken(map_get($default, bd-color), 5%),
+                  map_get($default, ft-color));
+        }
+
+        // 由于 margin-left: -1px; 这个处理兄弟元素
+        & + .btn {
+          border-left-color: $border-color;
+        }
+      }
+    }
+  }
+}

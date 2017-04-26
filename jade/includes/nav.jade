@@ -1,0 +1,93 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##导航栏
+.doc-section
+    .markdown-body
+        :markdown
+            ### 类型
+            - 不带竖线
+            - 带竖线
+            - 带下拉菜单
+    .example
+        nav.nav
+            ul.clearfix
+                li.pull-left.li-before
+                    a(href="#") 导航
+                li.pull-left.li-before
+                    a(href="#") 导航
+                li.pull-left.li-before
+                    a(href="#") 导航
+                li.pull-left.li-before
+                    a(href="#") 导航
+        nav.nav.nav-primary
+            ul.clearfix
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left
+                    a(href="#") 导航
+        nav.nav.nav-success
+            ul.clearfix
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left
+                    a(href="#") 导航
+                li.pull-left.nav-dropdown.dropdown
+                    a.dropdown-toggle(href="javascript:;") 导航
+                    span.arrow-down-white
+                    ul.nav-dropdown-menu.dropdown-menu
+                        li
+                            a(href="") 下拉导航一
+                        li
+                            a(href="") 下拉导航二
+                        li
+                            a(href="") 下拉导航三
+                        li
+                            a(href="") 下拉导航四
+
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li class="pull-left li-before"><a href="#">导航一</a></li>
+                            <li class="pull-left li-before"><a href="#">导航一</a></li>
+                            <li class="pull-left li-before"><a href="#">导航一</a></li>
+                            <li class="pull-left li-before"><a href="#">导航一</a></li>
+                            <li class="pull-left li-before"><a href="#">导航一</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav nav-success">
+                        <ul class="clearfix">
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left"><a href="#">导航一</a></li>
+                            <li class="pull-left nav-dropdown">
+                                <a href="#">导航一</a>
+                                <span class="arrow-down-white"></span>
+                                <ul class="nav-dropdown-menu">
+                                    <li><a href="">下拉导航一</a></li>
+                                    <li><a href="">下拉导航二</a></li>
+                                    <li><a href="">下拉导航三</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+

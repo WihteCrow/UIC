@@ -1,0 +1,86 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##分页
+.doc-section
+    .markdown-body
+        :markdown
+            ### 类型
+            - `默认样式`
+            - `分页器`
+
+    .example
+        .pagination.pagination-complex
+            .prev
+                a(href="javascript:void(0)") 上一页
+            ul
+                li.active
+                    a(href="javascript:void(0)") 1
+                li
+                    a(href="javascript:void(0)") 2
+                li
+                    a(href="javascript:void(0)") 3
+            .next
+                a(href="javascript:void(0)") 下一页
+            .page-check
+                span.page-count 共 3 页
+                span 到
+                    input(type="text")
+                    button(type="button") 确定
+                    | 页
+        .pagination.pagination-simple
+            ul
+                li.first-page
+                    a(href="javascript:void(0)")
+                        i.ui-icon.icon-pc-prev
+                li.prev-page
+                    a(href="javascript:void(0)")
+                        i.ui-icon.icon-pc-chevron-left
+                li
+                    input(type="text")
+                    span 共 16 页
+                li.next-page
+                    a(href="javascript:void(0)")
+                        i.ui-icon.icon-pc-chevron-right
+
+                li.last-page
+                    a(href="javascript:void(0)")
+                        i.ui-icon.icon-pc-next
+
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <div class="pagination pagination-complex">
+                      <div class="prev"><a href="javascript:void(0)">上一页</a></div>
+                      <ul>
+                        <li class="active"><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                      </ul>
+                      <div class="next"><a href="javascript:void(0)">下一页</a></div>
+                      <div class="page-check"><span class="page-count">共 3 页</span><span>到
+                          <input type="text">
+                          <button type="button">确定</button>页</span></div>
+                    </div>
+                    //- 分页器
+                    <div class="pagination pagination-simple">
+                        <ul>
+                            <li class="first-page">
+                                <a href="javascript:(void);"><i class="ui-icon icon-pc-prev"></i></a>
+                            </li>
+                            <li class="prev-page">
+                                <a href="javascript:(void);"><i class="ui-icon icon-pc-chevron-left"></i></a>
+                            </li>
+                            <li class="p">
+                                <input type="text" />
+                                <span>共 16 页</span>
+                            </li>
+                              <li class="next-page">
+                                <a href="javascript:(void);"><i class="ui-icon icon-pc-chevron-right"></i></a>
+                            </li>
+                            <li class="last-page">
+                                <a href="javascript:(void);"><i class="ui-icon icon-pc-next"></i></a>
+                            </li>
+                        </ul>
+                    </div>

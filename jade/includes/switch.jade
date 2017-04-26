@@ -1,0 +1,53 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##开关类型按钮
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - `uic-switch.switch-left`
+            - `uic-switch.switch-right`
+    .example
+        .uic-switch.switch-left
+            label.label-left 关闭
+            .switch-bar
+                .switch-ball
+            label.label-right 开启
+        br
+        br
+        .uic-switch.switch-right
+            label.label-left 关闭
+            .switch-bar
+                .switch-ball
+            label.label-right 开启
+        br
+        br
+        .uic-switch-big.switch-right
+            .switch-bar
+                .switch-ball
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <div class="uic-switch switch-left">
+                        <label class="label-left">关闭</label>
+                        <div class="switch-bar">
+                            <div class="switch-ball"></div>
+                        </div>
+                        <label class="label-right">开启</label>
+                    </div>
+
+                    <div class="uic-switch switch-right">
+                        <label class="label-left">关闭</label>
+                        <div class="switch-bar">
+                            <div class="switch-ball"></div>
+                        </div>
+                        <label class="label-right">开启</label>
+                    </div>
+                    .uic-switch-big 为生成的一个测试类
+                    <div class="uic-switch-big switch-right">
+                        <div class="switch-bar">
+                            <div class="switch-ball"></div>
+                        </div>
+                    </div>

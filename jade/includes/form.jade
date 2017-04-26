@@ -1,0 +1,80 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##form
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - `带文字，icon 的输入框`
+            - `带按钮的输入框`
+            - `带下拉列表的输入框`
+    .example
+        .input-group
+            input.form-control(type="text" placeholder="带文字或 icon 提示的输入框")
+            span.input-group-addon Email
+        .input-group
+            span.input-group-addon @
+            input.form-control(type="text" placeholder="placeholder")
+        .input-group
+            input.form-control(type="text" placeholder="搜索框类型")
+            span.input-group-btn
+                button.btn.btn-primary(type="button") search
+        .input-group
+            input.form-control(type="text" placeholder="搜索框类型")
+            span.input-group-btn
+                button.btn.btn-success(type="button") search
+        .input-group
+            .input-group-btn.dropdown
+                button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown") dropdown
+                    span.arrow-down-primary
+                ul.dropdown-menu
+                    li
+                        a(href="#") test1
+                    li
+                        a(href="#") test2
+                    li
+                        a(href="#") test3.
+            input.form-control(type="text" placeholder="下拉输入")
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="带文字或 icon 提示的输入框"/>
+                        <span class="input-group-addon">Email</span>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="placeholder"/>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索框类型"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary">@</button>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索框类型"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success">@</button>
+                        </span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-btn dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">dropdown <span class="arrow-down-primary"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+
+
+

@@ -1,0 +1,80 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##表格
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - `表格`
+
+            只在table上追加class uic-table 为基础类
+            在此基础上追加
+
+            -    border                  边框
+            -    border-outer            只有外边框
+            -    border-horizontal       只有水平边框
+            -    even-color              奇数行加色
+            -    odd-color               偶数行加色
+            -    hover-able              hover变色
+    .example
+        table.uic-table.border-horizontal.hover-able.even-color.table-test#table
+            thead
+                tr
+                    th 表头1
+                    th 表头2
+                    th 表头3
+                    th 表头4
+            tbody
+                tr
+                    td 内容1
+                    td 内容2
+                    td 内容3
+                    td 内容4
+                tr
+                    td 内容1
+                    td 内容2
+                    td 内容3
+                    td 内容4
+                tr
+                    td 内容1
+                    td 内容2
+                    td 内容3
+                    td 内容4
+                tr
+                    td 内容1
+                    td 内容2
+                    td 内容3
+                    td 内容4
+                tr
+                    td 内容1
+                    td 内容2
+                    td 内容3
+                    td 内容4
+        br
+        br
+        button#table1 边框
+        button#table2 只有外边框
+        button#table3 只有水平边框
+        button#table4 奇数行加色
+        button#table5 偶数行加色
+        button#table6 hover变色
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <table id="table" class="uic-table">
+                       <thead>
+                            <tr>
+                                <th>表头1</th>
+                                // etc
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>内容1</td>
+                                // etc
+                            </tr>
+                            // etc
+                        </tbody>
+                    </table>

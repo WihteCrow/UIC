@@ -1,0 +1,56 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##Img
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - `缩略图`
+            - `图文混排`
+    .example
+        a.thumbnail(href="#")
+            img(src="http://placehold.it/350x150" alt="")
+        .row.clearfix
+            .col-md-4.pull-left
+                .thumbnail
+                    a(href="#")
+                        img(src="http://placehold.it/350x150")
+                    .caption
+                        h3 图文混排
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dicta illo, officiis numquam sit distinctio, veritatis vitae provident. Beatae totam, fuga cum id voluptate consequuntur nisi reprehenderit optio aperiam sapiente!
+            .col-md-8.pull-left
+                .thumbnail.thumbnail-left
+                    a(href="#")
+                        img(src="http://placehold.it/350x150")
+                    .caption-right
+                        h3 图文混排
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dicta illo, officiis numquam sit distinctio, veritatis vitae provident. Beatae totam, fuga cum id voluptate consequuntur nisi reprehenderit optio aperiam sapiente!
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    <a href="" class="thumbnail"><img src="http://placehold.it/350x150" /></a>
+                    <div class="row clearfix">
+                        <div class="col-md-4 pull-left">
+                        //- 内容
+                        <div class="thumbnail">
+                            <a href="#"><img src="http://placehold.it/350x150"></a>
+                            <div class="caption">
+                                <h3>图文混排</h3>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus, rerum quo, rem nobis repudiandae, natus voluptatum eaque at quasi architecto error doloremque id debitis saepe velit, consectetur consequuntur! Possimus?</p>
+                            </div>
+                        </div>// end
+                        </div>
+                        <div class="col-md-4 pull-left">
+                        //- 内容
+                        <div class="thumbnail">
+                            <a href="#"><img src="http://placehold.it/350x150"></a>
+                            <div class="caption">
+                                <h3>图文混排</h3>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus, rerum quo, rem nobis repudiandae, natus voluptatum eaque at quasi architecto error doloremque id debitis saepe velit, consectetur consequuntur! Possimus?</p>
+                            </div>
+                        </div>// end
+                        </div>
+                    </div>
+

@@ -1,0 +1,46 @@
+/**
+ * $fileOverview
+ * $author
+ * $version 0.0.1
+ * $time 2015/9/8
+ */
+
+// 基础颜色配置
+
+// 蓝色系
+$base-blue: #00a0e9; // 主色 主要用户按钮
+$base-blue-dark: #5894d1;
+$base-blue-darker: #4286c9; // 数据颜色
+$base-blue-darker-dark: #0f82b6; // 按钮操作色
+
+// 黑色系
+$base-black: #333333; // 文字主色
+$base-black-light: #787878; // 辅助文字色
+$base-black-lighter: #999999; // 辅助文字色
+$base-black-lighter-light: #c4c4c4; // 禁止按钮文字颜色
+
+$base-green: #73bc22; // 数据表颜色
+$base-orange: #ec9700; // 数据描边
+
+// 红色系
+$base-red: #ed6844; // 数据描边
+$base-red-dark: #fb5021; // 消息提示类
+
+// 白色系
+$base-withe: #ffffff; // 背景色
+
+// 灰色系
+$base-gray-light: #fafafa; // 侧栏背景色
+$base-gray: #f3f3f4;
+$base-gray-dark: #dcdcdc; // 描边色 禁用描边色
+$base-gray-darker: #dcdcdc; // 侧边栏滚动条色
+
+//字体
+$font-family: SimSun, Arial, "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+$font-size-base: 12px;
+$border-radius: 3px;
+
+// 禁止
+$base-disabled-bg: #f2f2f2;
+$base-disabled-fn: #c4c4c4;
+$base-disabled-bd: #e6e6e6;

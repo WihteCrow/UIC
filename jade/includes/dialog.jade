@@ -1,0 +1,85 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##弹窗
+.doc-section
+    .markdown-body
+        :markdown
+            ###类型
+            - `确认弹窗`
+            - `警告弹窗`
+    .example
+        button#popover1 确认弹窗
+        button#popover2 危险弹窗
+        button#popover3 特殊弹窗
+        .dialog#dialog1
+            .dialog-form
+                .title-bar
+                    .title 确认窗口
+                    .del-icon X
+                .content
+                    div 这是一个确认窗口
+                .button-pane
+                    button.btn.btn-success OK
+                    button.btn.btn-primary Cancel
+            .mask
+        .dialog.danger#dialog2
+            .dialog-form
+                .title-bar
+                    .title 危险弹窗
+                    .del-icon X
+                .content
+                    div 这是一个危险弹窗
+                .button-pane
+                    button.btn.btn-danger OK
+                    button.btn.btn-primary Cancel
+            .mask
+        .dialog.special#dialog3
+            .dialog-form
+                .title-bar
+                    .title 特殊样式
+                    .del-icon X
+                .content
+                    div 这是一个特殊样式。测试继承后属性覆盖效果
+                .button-pane
+                    button.btn.btn-success OK
+                    button.btn.btn-link Cancel
+            .mask
+    .highlight
+        pre
+            code.lang-html
+                :highlight
+                    // 确认窗口
+                    <div id="dialog1" class="dialog">
+                        <div class="dialog-form">
+                            <div class="title-bar">
+                                <div class="title">确认窗口</div>
+                                <div class="del-icon">X</div>
+                            </div>
+                            <div class="content">
+                                <div>这是一个确认窗口</div>
+                            </div>
+                            <div class="button-pane">
+                                <button class="btn btn-success">OK</button>
+                                <button class="btn btn-primary">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+                    // 危险弹窗
+                    <div id="dialog2" class="dialog danger">
+                        <div class="dialog-form">
+                            <div class="title-bar">
+                                <div class="title">危险弹窗</div>
+                                <div class="del-icon">X</div>
+                            </div>
+                            <div class="content">
+                                <div>这是一个危险弹窗</div>
+                            </div>
+                            <div class="button-pane">
+                                <button class="btn btn-danger">OK</button>
+                                <button class="btn btn-primary">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </div>

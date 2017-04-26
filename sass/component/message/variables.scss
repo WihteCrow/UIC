@@ -1,0 +1,40 @@
+@import "../../variables/global";
+
+$msg-padding-vertical: (60px - 20px - 2px) / 2;
+$msg-padding-horizontal: 12px;
+$msg-line-height: 20px;
+$msg-font-size: 14px;
+$msg-border-radius: $border-radius;
+
+// msg-info
+$msg-info: (
+        default: (
+                bg-color: #daedf7,
+                bd-color: #bde8f0,
+                ft-color: #34718e
+        )
+);
+
+$msg-success: (
+        default: (
+                bg-color: #e8f9e8,
+                bd-color: #d2ead2,
+                ft-color: #3f7540
+        )
+);
+
+$msg-warn: (
+        default: (
+                bg-color: #fcf8e4,
+                bd-color: #f9eacd,
+                ft-color: #8a6d3f
+        )
+);
+
+$msg-error: (
+        default: (
+                bg-color: #fae7e7,
+                bd-color: #ffbdbd,
+                ft-color: #c55453
+        )
+);

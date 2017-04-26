@@ -1,0 +1,33 @@
+{
+  "name": "uic",
+  "version": "0.0.1",
+  "description": "UI 组件",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "root": "../",
+  "NM": "node_modules/",
+  "highlight": "github-gist",
+  "jades": [
+    "caret",
+    "button"
+  ],
+  "dependencies": {
+    "github-markdown-css": "^2.0.10",
+    "grunt-css-docs": "^1.1.5",
+    "highlight.js": "^8.8.0",
+    "jquery": "^1.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-groc": "^0.6.0",
+    "grunt-jsdoc": "^0.6.8",
+    "jade": "^1.11.0",
+    "jstransformer-highlight": "^1.0.1",
+    "jstransformer-markdown": "^1.1.0"
+  }
+}

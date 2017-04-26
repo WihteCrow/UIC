@@ -1,0 +1,38 @@
+@import "variables";
+@import "../../mixins/utils";
+
+$msg-type: (info, $msg-info),
+        (success, $msg-success),
+        (warn, $msg-warn),
+        (error, $msg-error);
+
+.msg, .msg-box{
+  position: relative;
+  line-height: $msg-line-height;
+  font-size: $msg-font-size;
+  color: $base-black;
+}
+
+.msg-box {
+  display: block;
+  padding: $msg-padding-vertical $msg-padding-vertical;
+  border-radius: $msg-border-radius;
+  border-width:1px;
+  border-style: solid;
+}
+
+
+@each $type, $obj in $msg-type {
+  $default: map_get($obj, default);
+  // block 有边框，背景
+  .msg-box.msg-#{$type} {
+    border-color: map_get($default, bd-color);
+    background-color: map_get($default, bg-color);
+  }
+
+  .msg.msg-#{$type}, .msg-box.msg-#{$type} {
+    color: map_get($default, ft-color);
+
+    @include disabled();
+  }
+}

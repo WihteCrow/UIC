@@ -1,0 +1,36 @@
+doctype html
+!= "<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->"
+!= "<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->"
+!= "<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->"
+!= "<!--[if gt IE 8]><!-->"
+html.no-js
+    != "<!--<![endif]-->"
+    head
+        // 声明文档使用的字符编码
+        meta(charset="utf-8")
+        // IE 使用最高模式
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        // 为移动设备添加 viewport
+        meta(name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
+        // 是否启用 WebApp 全屏模式
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        // 设置状态栏的背景颜色
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        // 禁止数字识自动别为电话号码
+        meta(name="format-detection" content="telephone=no")
+        // 不让android识别邮箱
+        meta(name="format-detection" content="email=no")
+        title=TITLE
+        // 页面描述 SEO
+        meta(name="description" content=DESCRIPTION)
+        meta(name="keywords" content=KEYWORDS)
+        link(rel="stylesheet" href= uic.root + uic.NM + "github-markdown-css/github-markdown.css")
+        link(rel="stylesheet" href= uic.root + uic.NM + "highlight.js/styles/default.css")
+        link(rel="styleSheet" href= uic.root + "stylesheets/doc/doc.css")
+        link(rel="styleSheet" href= uic.root + "stylesheets/uic.css")
+        link(rel="styleSheet" href="http://at.alicdn.com/t/font_1443166371_296486.css")
+        block link
+    body
+        block header
+        block section
+        block footer
