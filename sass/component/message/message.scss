@@ -1,3 +1,6 @@
+
+@import "compass/css3";
+
 @import "variables";
 @import "../../mixins/utils";
 
@@ -11,14 +14,35 @@ $msg-type: (info, $msg-info),
   line-height: $msg-line-height;
   font-size: $msg-font-size;
   color: $base-black;
+
+  .tip {
+    @include inline-block;
+    font-weight: 700;
+    // 占位
+    width: $icon-font-size;
+    vertical-align: middle;
+    margin-right: $msg-padding-horizontal;
+  }
+
+  &.msg-close {
+    padding-right: $msg-right-spacing;
+    .close {
+      position: absolute;
+      right: ($msg-right-spacing - $icon-font-size) / 2;
+      top: 50%;
+      margin-top: -$msg-line-height / 2;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      @include user-select-none;
+    }
+  }
 }
 
 .msg-box {
   display: block;
-  padding: $msg-padding-vertical $msg-padding-vertical;
-  border-radius: $msg-border-radius;
-  border-width:1px;
-  border-style: solid;
+  padding: $msg-padding-vertical $msg-padding-horizontal;
+  @include round-box(null, $msg-border-radius);
 }
 
 

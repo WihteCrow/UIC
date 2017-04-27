@@ -6,8 +6,12 @@
     background-color: $background;
   }
 
+  border-width: 1px;
+  border-style: solid;
   @if($border != null) {
-    border: 1px solid  $border;
+    border-color: $border;
+  } @else {
+    border-color: transparent;
   }
 
   color: $text-color;
@@ -16,10 +20,4 @@
       color: $text-color;
     }
   }
-}
-// Button sizes
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
 }

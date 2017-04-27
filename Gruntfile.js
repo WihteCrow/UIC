@@ -46,5 +46,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-groc');
 
-    grunt.registerTask('go', ['jade', 'groc']);
+    grunt.registerTask('go', ['jade']);
 };

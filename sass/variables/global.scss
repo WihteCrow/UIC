@@ -38,9 +38,125 @@ $base-gray-darker: #dcdcdc; // 侧边栏滚动条色
 //字体
 $font-family: SimSun, Arial, "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
 $font-size-base: 12px;
+$font-size-lg: 16px;
+$font-size-md: 14px;
 $border-radius: 3px;
 
 // 禁止
 $base-disabled-bg: #f2f2f2;
 $base-disabled-fn: #c4c4c4;
 $base-disabled-bd: #e6e6e6;
+
+// iconfont
+$icon-font-size: 16px;
+$icon-font-family: "iconfont" !important;
+
+// 功能
+$features-spacing: 12px;
+
+// 尺寸 内边距(vertical, horizontal) 字体大小(fz) 行高(lh)
+$md: (
+        vertical: 8px,
+        horizontal: 18px,
+        fz: $font-size-base,
+        lh: 12px
+);
+
+$lg: (
+        vertical: 10px,
+        horizontal: 20px,
+        fz: $font-size-base,
+        lh: 12px
+);
+
+$sm: (
+        vertical: 5px,
+        horizontal: 12px,
+        fz: $font-size-base,
+        lh: 12px
+);
+
+$single: (
+        vertical: 8px,
+        horizontal: 8px,
+        fz: $font-size-base,
+        lh: $font-size-base
+);
+
+// 皮肤 背景色(bg-color) 边框色(bd-color) 字体颜色(ft-color)
+$primary: (
+        default: (
+                bg-color: $base-blue,
+                bd-color: $base-blue,
+                ft-color: $base-withe
+        ),
+        hover: (
+                bg-color: $base-blue-darker-dark,
+                bd-color: $base-blue-darker-dark,
+                ft-color: $base-withe
+        )
+);
+
+$info: (
+        default: (
+                bg-color: $base-withe,
+                bd-color: $base-gray-dark,
+                ft-color: $base-black
+        ),
+        hover: (
+                bg-color: $base-gray,
+                bd-color: $base-gray-dark,
+                ft-color: $base-black
+        )
+);
+
+$secondary: (
+        default: (
+                bg-color: $base-gray,
+                bd-color: $base-gray-dark,
+                ft-color: $base-black
+        ),
+        hover: (
+                bg-color: $base-gray-dark,
+                bd-color: $base-gray-dark,
+                ft-color: $base-black
+        )
+);
+
+// 没有定义hover 统一加深 5%
+$success: (
+        default: (
+                bg-color: $base-green,
+                bd-color: $base-green,
+                ft-color: $base-withe
+        )
+);
+
+$warn: (
+        default: (
+                bg-color: $base-orange,
+                bd-color: $base-orange,
+                ft-color: $base-withe
+        )
+);
+
+$danger: (
+        default: (
+                bg-color: $base-red,
+                bd-color: $base-red,
+                ft-color: $base-withe
+        )
+);
+
+$link: (
+        default: (
+                bg-color: transparent,
+                bd-color: transparent,
+                ft-color: $base-black
+        ),
+        hover: (
+                bg-color: transparent,
+                bd-color: transparent,
+                ft-color: $base-blue
+        )
+);

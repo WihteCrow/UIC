@@ -1,0 +1,50 @@
+@import "compass/css3";
+
+@import "../../mixins/utils";
+@import "variables";
+
+$checkbox-size: (lg, $checkbox-lg), (md, $checkbox-md), (sm, $checkbox-sm);
+
+.checkbox {
+  @include inline-block;
+  @include user-select-none;
+  cursor: pointer;
+
+  // 未选中
+  > span:first-child:before {
+    content: $checkbox-type;
+    color: $checkbox-color-primary;
+    margin-right: 2px;
+    background: none;
+    font-family: $icon-font-family;
+    font-size: $font-size-base + 2px;
+    @include inline-block;
+  }
+
+  // 半选
+  &.half-checked {
+    > span:first-child:before {
+      content: $checkbox-type-half-checked;
+    }
+  }
+
+  // 选中
+  &.checked {
+    > span:first-child:before {
+      content: $checkbox-type-checked;
+    }
+  }
+
+  @include disabled;
+}
+
+// 按钮类型
+@each $type, $obj in $checkbox-size {
+  .checkbox-#{$type} {
+    font-size: map_get($obj, size);
+    line-height: map_get($obj, height) + 2px;
+    > span:first-child:before {
+      font-size: map_get($obj, size) + 2px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+
+@import "variables";
+@import "mixins";
+
+.modal {
+  .modal-form {
+    color: $base-black;
+    @include dialog-base(600px, 300px, 50px, 50px);
+    @include layer-index(6);
+    .title-bar {
+      border-bottom: 1px solid $border-color;
+      .title {
+        font-size: $font-size-lg;
+        font-weight: bold;
+      }
+      .del-icon {
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        line-height: 20px;
+        margin-right: $modal-padding;
+      }
+    }
+    .content {
+      padding: $modal-padding;
+    }
+    .button-pane {
+      text-align: right;
+
+      .btn:last-child {
+        margin-right: 0;
+      };
+    }
+  }
+  .mask {
+    @include mask-maker(#000, 0.3);
+  }
+}
+// 弹窗 子页面
+.modal.page {
+  .modal-form {
+    padding: 0;
+    @include dialog-border();
+    .title-bar {
+      padding: 0 $modal-padding;
+    }
+    .button-pane {
+      text-align: right;
+      background-color: $modal-bottom-color;
+      border-top: 1px solid $border-color;
+      padding: 0 $modal-padding;
+
+      .btn:last-child {
+        margin-right: 0;
+      };
+    }
+  }
+}
+// 弹出面板 表单
+.modal.popup {
+  .modal-form {
+    @include dialog-base(180px, 190px, 0);
+    .title-bar {
+      border-bottom: 0;
+    }
+    .content {
+      padding: $modal-padding 0 0 0;
+    }
+    .button-pane {
+      text-align: left;
+
+      .btn:first-child {
+        margin-left: 0;
+      };
+    }
+  }
+}
+
+.modal.loading {
+  .modal-form{
+    @include dialog-base(240px, 80px, 0, 0);
+    padding: 0;
+    .content {
+      padding: 0;
+      font-size: $font-size-lg;
+      font-weight: bold;
+      line-height: 80px;
+      text-align: center;
+    }
+  }
+  .mask {
+    @include mask-maker(#DCE2F1, 0.6);
+  }
+}

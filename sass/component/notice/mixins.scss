@@ -1,0 +1,23 @@
+@import "../../mixins/utils";
+
+@mixin notice-size($default-size) {
+  //消息通知中心
+  $center: -$default-size /2 - 2 - 2;
+  min-width: $default-size * 3;
+  .icon {
+    line-height: $default-size * 2;
+    .iconfont {
+      font-size: $default-size * 2;
+    }
+  }
+
+  .badge {
+    left: $default-size * 2;
+    background-color: $notice-badge-bg;
+    font-size: $default-size;
+    margin-left: $center - 4;
+    margin-top: $center - 4;
+    line-height: $default-size;
+    @include border-radius($default-size);
+  }
+}

@@ -1,0 +1,44 @@
+@import "compass/css3";
+
+@import "../../mixins/utils";
+@import "variables";
+@import "mixins";
+
+$tag-skin: (primary, $primary),
+        (secondary, $tag-secondary),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger);
+
+$tag-size: (lg, $lg), (md, $md), (sm, $sm);
+$default-size: $md;
+
+// 初始化
+.tag {
+  @include inline-block;
+  @include border-radius($border-radius);
+  @include features-size(map_get($default-size, vertical),
+          map_get($default-size, horizontal) - 6px,
+          map_get($default-size, fz),
+          map_get($default-size, lh));
+}
+
+// 尺寸 内部局横向特殊处理
+@each $type, $obj in $tag-size{
+  .tag.tag-#{$type} {
+    @include features-size(map_get($obj, vertical),
+            map_get($obj, horizontal - 6px),
+            map_get($obj, fz),
+            map_get($obj, lh));
+  }
+}
+
+// 皮肤
+@each $type, $obj in $tag-skin {
+  $default: map_get($obj, default);
+  .tag.tag-#{$type} {
+    @include tag-skin(map_get($default, bd-color));
+
+    @include disabled();
+  }
+}

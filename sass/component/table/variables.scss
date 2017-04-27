@@ -1,0 +1,17 @@
+@import "../../variables/global";
+
+// table默认颜色
+$table-borderColor: $base-gray;
+$table-th-bgColor: #f8f8f8;
+// 边框色
+$table-hover-bdColor: #6bc04b;
+// 背景色
+$table-hover-bgColor: #ffffff;
+$table-odd-bgColor: #ffffff;
+$table-even-bgColor: #f3f7f4;
+
+$table-th-vertical: 20px;
+$table-th-horizontal: 10px;
+
+$table-td-vertical: 10px;
+$table-td-horizontal: 10px;

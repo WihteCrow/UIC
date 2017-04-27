@@ -2,17 +2,8 @@
     .markdown-body
         :markdown
             ##子窗口
-.doc-section
-    .markdown-body
-        :markdown
-            ###类型
-            - `单页面`
-            - `弹出面板`
     .example
-        button#modalBtn1 单页面
-        button#modalBtn2 弹出面板
-        button#modalBtn3 加载中
-        .modal.page#modal1
+        .modal.page
             .modal-form
                 .title-bar
                     .title 单页面
@@ -20,64 +11,6 @@
                 .content
                     iframe
                 .button-pane
-                    button.btn.btn-success OK
+                    button.btn.btn-primary OK
                     button.btn.btn-link Cancel
-            .mask
-        .modal.popup#modal2
-            .modal-form
-                .content
-                    div 这里可以放一个表单,这个表单是不带蒙版的。
-                    p     修改优化方式：
-                    p     优化方式A
-                    p     优化方式B
-                    p     优化方式C
-                .button-pane
-                    button.btn.btn-success OK
-                    button.btn.btn-link Cancel
-        .modal.loading#modal3
-            .modal-form
-                .content
-                    div 请等待........
-            .mask
     .highlight
-        pre
-            code.lang-html
-                :highlight
-                    // 确认窗口
-                    <div id="modal1" class="modal">
-                        <div class="modal-form">
-                            <div class="title-bar">
-                                <div class="title">单页面</div>
-                                <div class="del-icon">X</div>
-                            </div>
-                            <div class="content">
-                                // 正文内容
-                            </div>
-                            <div class="button-pane">
-                                <button class="btn btn-success">OK</button>
-                                <button class="btn btn-primary">Cancel</button>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </div>
-                    // 弹出面板
-                    <div id="modal2" class="modal popup" style="display: none;">
-                        <div class="modal-form">
-                            <div class="content">
-                                // 正文内容
-                            </div>
-                            <div class="button-pane">
-                                <button class="btn btn-success">OK</button>
-                                <button class="btn btn-link">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-                    // loading
-                    <div id="modal3" class="modal loading" style="display: none;">
-                        <div class="modal-form">
-                            <div class="content">
-                                <div>请等待........</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </div>

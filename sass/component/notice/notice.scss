@@ -1,0 +1,29 @@
+@import "compass/css3";
+@import "variables";
+@import "mixins";
+
+$notice-size: (lg, $notice-lg), (md, $notice-md), (sm, $notice-sm);
+
+$default-size: $notice-sm;
+
+.notice {
+  @include inline-block;
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: 0;
+    color: $base-withe;
+    border: 2px solid $base-withe;
+    padding: 2px;
+    text-align: center;
+  }
+
+  @include notice-size($default-size);
+}
+
+@each $type, $size in $notice-size{
+  .notice.notice-#{$type} {
+    @include notice-size($size);
+  }
+}

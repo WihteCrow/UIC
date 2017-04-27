@@ -1,0 +1,8 @@
+@import "../../variables/global";
+
+// 皮肤 背景色(bg-color) 边框色(bd-color) 字体颜色(ft-color)
+$tag-secondary: (
+        default: (
+                bd-color: $base-black-lighter-light
+        )
+);

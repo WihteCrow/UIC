@@ -1,0 +1,89 @@
+@import "compass/utilities";
+@import "compass/css3";
+
+@import "../../mixins/utils";
+@import "variables";
+@import "mixins";
+
+$default: map_get($info, default);
+$hover: map_get($info, hover);
+
+$select-size: (lg, $lg), (md, $md), (sm, $sm);
+$default-size: $md;
+
+.select {
+  @include inline-block;
+  @include user-select-none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+
+  .selected-bar{
+    @include features-size(map_get($default-size, vertical), map_get($default-size, horizontal), map_get($default-size, fz), map_get($default-size, lh));
+    @include select-style($default, $border-radius);
+
+    &.active, &:hover, &:active, &:focus {
+      @include select-style($hover, $border-radius);
+    }
+
+    .selected-text {
+      margin-right: $features-spacing;
+    }
+
+    .icon-down, .icon-up {
+      float: right;
+      font-size: $select-icon-size;
+    }
+    .icon-down:before{
+      content: $select-icon-down;
+    }
+
+    .icon-up:before{
+      content: $select-icon-up;
+    }
+
+    @include clearfix;
+  }
+}
+
+// 默认组件修改样式
+.select {
+  position: relative;
+  background-color: $base-withe;
+  select{
+    @include appearance(none);
+    @include features-size(map_get($single, vertical), map_get($single, horizontal), map_get($single, fz), map_get($single, lh));
+    @include select-style($default, $border-radius);
+    background-color: transparent;
+    outline: 0;
+    padding-right: $select-icon-pacing;
+
+    // 把icon放到select后面防止点击没反应
+    position: relative;
+    z-index: 2;
+
+    &::-ms-expand {
+      display: none;/*清除IE默认下拉按钮，IE10以上有效，IE8，9默认下拉按钮仍旧存在*/
+    }
+
+    &+.icon{
+      position: absolute;
+      z-index: 1;
+      right: 4px;
+      top: 50%;
+      margin-top: -8px;
+      .iconfont {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+// 选框尺寸
+@each $type, $obj in $select-size {
+  .select.select-#{$type} {
+    .selected-bar {
+      @include features-size(map_get($obj, vertical), map_get($obj, horizontal), map_get($obj, fz), map_get($obj, lh));
+    }
+  }
+}

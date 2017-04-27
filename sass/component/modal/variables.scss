@@ -1,0 +1,11 @@
+@import "../../variables/global";
+
+$border-color: darken($base-gray, 5%);
+
+// 弹窗
+$dialog-baseColor: #3abd4d;
+$dialog-padding: 10px;
+$modal-bottom-color: #fafafa;
+$modal-padding: 20px;
+// 蒙版
+$mask-defaultBgColor: $base-gray;

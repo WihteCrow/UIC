@@ -1,0 +1,54 @@
+
+@import "variables";
+@import "mixins";
+
+// ===============表格本体========================
+
+.table-box{
+  // 处理百分比遗留的0.5px问题
+  margin: -1px -0.1em;
+  background-color: $base-withe;
+}
+.table {
+  // 表头
+  @include normal();
+  // 默认边框效果
+  &.border {
+    @include border();
+  };
+  &.border-outer {
+    @include border-outer();
+  };
+  &.border-horizontal {
+    @include border-horizontal();
+  };
+  // 隔行颜色
+  &.even-color {
+    tbody tr:nth-child(even){
+      background: $table-even-bgColor;
+    }
+  }
+  &.odd-color {
+    tbody tr:nth-child(odd){
+      background: $table-odd-bgColor;
+    }
+  }
+  // hover
+  &.hover-able tr:hover {
+    td {
+      border-top: 1px solid $table-hover-bdColor;
+      border-bottom: 1px solid $table-hover-bdColor;
+      &:first-child {
+        border-left: 1px solid $table-hover-bdColor;
+      }
+      &:last-child {
+        border-right: 1px solid $table-hover-bdColor;
+      }
+    }
+    + tr {
+      td {
+        border-top: 0;
+      }
+    }
+  }
+}

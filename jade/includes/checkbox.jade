@@ -2,27 +2,26 @@
     .markdown-body
         :markdown
             ##复选
-.doc-section
-    .markdown-body
-        :markdown
-            ###类型
-            - 默认
     .example
-        label.checkbox
-            span 未选中
-        label.checkbox.checked
-            span 选中
-        label.checkbox.half-checked
-            span 半选
-        br
-        br
-        button#ckbDis 可用/禁用
+        .example-block
+            label.checkbox
+                span 未选中
+            label.checkbox.checked
+                span 选中
+            label.checkbox.half-checked
+                span 半选
+        .example-block
+            label.checkbox.checkbox-md
+                span 未选中
+            label.checkbox.checked.checkbox-md
+                span 选中
+            label.checkbox.half-checked.checkbox-md
+                span 半选
+        .example-block
+            label.checkbox.checkbox-lg
+                span 未选中
+            label.checkbox.checked.checkbox-lg
+                span 选中
+            label.checkbox.half-checked.checkbox-lg
+                span 半选
     .highlight
-        pre
-            code.lang-html
-                :highlight
-                    <div class="example">
-                        <label class="checkbox"><span>未选中</span></label>
-                        <label class="checkbox checked"><span>选中</span></label>
-                        <label class="checkbox half-checked"><span>半选</span></label>
-                    </div>

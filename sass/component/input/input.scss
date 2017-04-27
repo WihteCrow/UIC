@@ -1,0 +1,28 @@
+@import "../../variables/global";
+@import "../../mixins/utils";
+@import "variables";
+
+$input-size: (lg, $lg), (md, $md), (sm, $sm), (single, $single);
+
+// 初始化
+.input {
+  @include round-box($input-border-color, $border-radius);
+  @include inline-block;
+  @include features-size(map_get($md, vertical), map_get($md, horizontal) - 6px, map_get($md, fz), map_get($md, lh));
+  height: map_get($md, lh);
+  &:focus {
+    outline: 0;
+  }
+}
+
+// 选框尺寸
+@each $type, $obj in $input-size {
+  .input.input-#{$type} {
+    @include features-size(map_get($obj, vertical), map_get($obj, horizontal), map_get($obj, fz), map_get($obj, lh));
+    height: map_get($obj, lh);
+
+    @if ($type == single) {
+
+    }
+  }
+}

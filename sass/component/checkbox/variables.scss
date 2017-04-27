@@ -1,0 +1,22 @@
+@import "../../variables/global";
+
+$checkbox-color-primary: $base-blue;
+$checkbox-type: "\e609";
+$checkbox-type-half-checked: "\e603";
+$checkbox-type-checked: "\e60a";
+
+
+$checkbox-sm: (
+        size: $font-size-base,
+        height: $font-size-base
+);
+
+$checkbox-md: (
+        size: 14px,
+        height: 14px
+);
+
+$checkbox-lg: (
+        size: 16px,
+        height: 16px
+);

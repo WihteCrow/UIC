@@ -83,10 +83,13 @@
 
 
 // 容器
-@mixin round-box($color: $border-color, $radius: 2px) {
-  border: 1px solid $color;
+@mixin round-box($color, $radius: $border-radius) {
+  border-width:1px;
+  @if($color) {
+    border-color: $color;
+  }
+  border-style: solid;
   @include border-radius($radius);
-  padding: 0;
 }
 
 // 特效
@@ -143,4 +146,11 @@
   &.disabled, &[disabled] {
    @include disabledFn($base-disabled-fn, $base-disabled-bg, $base-disabled-bd);
   }
+}
+
+
+@mixin features-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
 }

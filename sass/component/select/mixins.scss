@@ -1,0 +1,7 @@
+@import "../../mixins/utils";
+
+@mixin select-style($obj, $border-radius) {
+  color: map_get($obj, ft-color);
+  background-color: map_get($obj, bg-color);
+  @include round-box(map_get($obj, bd-color), $border-radius);
+}

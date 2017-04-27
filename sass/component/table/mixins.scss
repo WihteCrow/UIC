@@ -1,0 +1,126 @@
+@import "variables";
+
+// ===============边框设定========================
+// 只能指定到table元素上 绘制表格的边框
+@mixin border($color : $table-borderColor, $w : 1px) {
+  th {
+    border-top: $w solid $color;
+    &:first-child {
+      border-left: $w solid $color;
+    }
+    border-right: $w solid $color;
+  }
+  // 如果没有表头，则补充第一行边框
+  &.no-head {
+    tr:first-child td {
+      border-top: $w solid $color;
+      &:first-child {
+        border-left: $w solid $color;
+      }
+      border-right: $w solid $color;
+    }
+  }
+  tr {
+    td {
+      border-top: $w solid $color;
+      border-right: $w solid $color;
+      &:first-child {
+        border-left: $w solid $color;
+      }
+    }
+    &:last-child {
+      border-bottom: $w solid $color;
+    }
+  }
+}
+
+// 只有外边框
+@mixin border-outer($color : $table-borderColor, $w : 1px) {
+  th {
+    border-top: $w solid $color;
+    &:first-child {
+      border-left: $w solid $color;
+    }
+    &:last-child {
+      border-right: $w solid $color;
+    }
+  }
+  // 如果没有表头，则补充第一行边框
+  &.no-head {
+    tr:first-child td {
+      border-top: $w solid $color;
+      &:first-child {
+        border-left: $w solid $color;
+      }
+      &:last-child {
+        border-right: $w solid $color;
+      }
+    }
+  }
+  tr {
+    td {
+      &:first-child {
+        border-left: $w solid $color;
+      }
+      &:last-child {
+        border-right: $w solid $color;
+      }
+    }
+    &:last-child td {
+      border-bottom: $w solid $color;
+    }
+  }
+}
+
+// 只有外边框 和横线
+@mixin border-horizontal($color : $table-borderColor, $w : 1px) {
+  th {
+    border-top: $w solid $color;
+    &:first-child {
+      border-left: $w solid $color;
+    }
+    &:last-child {
+      border-right: $w solid $color;
+    }
+  }
+  // 如果没有表头，则补充第一行边框
+  &.no-head {
+    tr:first-child td {
+      border-top: $w solid $color;
+      &:first-child {
+        border-left: $w solid $color;
+      }
+      &:last-child {
+        border-right: $w solid $color;
+      }
+    }
+  }
+  tr {
+    td {
+      border-top: $w solid $color;
+      &:first-child {
+        border-left: $w solid $color;
+      }
+      &:last-child {
+        border-right: $w solid $color;
+      }
+    }
+    &:last-child td {
+      border-bottom: $w solid $color;
+    }
+  }
+}
+
+// 表头
+@mixin normal($bgColor: $table-th-bgColor) {
+  th {
+    background-color: $bgColor;
+    font-size: $font-size-base;
+    font-weight: bolder;
+    padding: $table-th-vertical $table-th-horizontal;
+  }
+
+  td {
+    padding: $table-td-vertical $table-td-horizontal;
+  }
+}

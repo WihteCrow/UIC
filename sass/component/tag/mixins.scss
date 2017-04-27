@@ -1,0 +1,15 @@
+@import "../../variables/global";
+
+@mixin tag-skin($color) {
+  background-color: $base-withe;
+
+  border-width: 1px;
+  border-style: solid;
+  @if($color != null) {
+    border-color: $color;
+  } @else {
+    border-color: transparent;
+  }
+
+  color: $color;
+}

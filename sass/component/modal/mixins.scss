@@ -1,0 +1,56 @@
+@import "../../mixins/utils";
+@import "variables";
+
+
+@mixin dialog-base($width, $height, $title-height: 35px, $button-height: 40px) {
+  //position: fixed;
+  background: $base-withe;
+  width: $width;
+  min-height: $height;
+  padding: 0 $dialog-padding;
+  border-radius: $border-radius;
+  .title-bar {
+    position: relative;
+    .title {
+      font-size: $font-size-base;
+      font-weight: bold;
+      height: $title-height;
+      line-height: $title-height;
+    }
+    .del-icon {
+      // 需要margin-top -50%自己的高度来居中
+      cursor: pointer;
+      color : $base-black-light;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      text-align: right;
+    }
+  }
+  // 正文内容 需要覆盖
+  .content {
+    min-height: $height - $title-height - $button-height;
+  }
+  // 按钮组
+  .button-pane {
+    bottom: $dialog-padding;
+    height: $button-height;
+    line-height: $button-height;
+
+    .btn:last-child {
+      margin-right: 0;
+    };
+  }
+}
+
+@mixin mask-maker($bgColor: $mask-defaultBgColor, $opacity: 0.4) {
+  position: fixed;
+  @include layer-index(5);
+  opacity: $opacity;
+  overflow: hidden;
+  background: $bgColor;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
