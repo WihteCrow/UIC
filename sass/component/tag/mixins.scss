@@ -1,6 +1,7 @@
-@import "../../variables/global";
+@import "../../mixins/utils";
+@import "variables";
 
-@mixin tag-skin($color) {
+@mixin tag-line-skin($color) {
   background-color: $base-withe;
 
   border-width: 1px;
@@ -12,4 +13,25 @@
   }
 
   color: $color;
+}
+
+@mixin tag-skin($background, $border, $text-color) {
+  @if $background != null {
+    background-color: $background;
+  }
+
+  border-width: 1px;
+  border-style: solid;
+  @if($border != null) {
+    border-color: $border;
+  } @else {
+    border-color: transparent;
+  }
+
+  color: $text-color;
+  label{
+    span:before {
+      color: $text-color;
+    }
+  }
 }

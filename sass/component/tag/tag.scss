@@ -1,6 +1,5 @@
 @import "compass/css3";
 
-@import "../../mixins/utils";
 @import "variables";
 @import "mixins";
 
@@ -36,9 +35,15 @@ $default-size: $md;
 // 皮肤
 @each $type, $obj in $tag-skin {
   $default: map_get($obj, default);
-  .tag.tag-#{$type} {
-    @include tag-skin(map_get($default, bd-color));
+  .tag.tag-line-#{$type} {
+    @include tag-line-skin(map_get($default, bd-color));
 
     @include disabled();
+  }
+
+  .tag.tag-#{$type} {
+    @include tag-skin(map_get($default, bg-color),
+            map_get($default, bd-color),
+            map_get($default, ft-color))
   }
 }
