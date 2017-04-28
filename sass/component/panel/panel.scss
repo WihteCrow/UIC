@@ -1,0 +1,95 @@
+@import "compass/css3";
+@import "variables";
+@import "mixins";
+
+$panel-line-skin: (primary, $primary),
+        (info, $panel-info),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger);
+
+$panel-skin: (primary, $primary),
+        (info, $info),
+        (secondary, $secondary),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger);
+
+$panel-size: (lg, $panel-lg), (md, $panel-md), (sm, $panel-sm);
+
+$default-size: $panel-md;
+
+.panel {
+  margin-bottom: $component-spacing;
+  background-color: $base-withe;
+  border-color: $panel-border-color;
+  border-width: 1px;
+  border-style: solid;
+
+  .panel-heading, .panel-footer {
+    line-height: map_get($default-size, lh);
+    padding: $panel-vertical $panel-horizontal;
+    border-style: solid;
+    border-color: $panel-border-color;
+  }
+  .panel-heading {
+    border-bottom-width: 1px;
+
+    .panel-title {
+      @include inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: map_get($default-size, title-size);
+    }
+  }
+  .panel-footer {
+    border-top-width: 1px;
+  }
+  .panel-body {
+    padding: $panel-body-padding;
+  }
+}
+
+// 尺寸
+@each $type, $obj in $panel-size{
+  .panel.panel-#{type} {
+    .panel-heading, .panel-footer{
+      line-height: map_get($obj, lh);
+    }
+    .panel-heading {
+      .panel-title {
+        color: map_get($obj, title-size);
+      }
+    }
+  }
+}
+
+
+// 面板皮肤
+@each $type, $obj in $panel-line-skin {
+  $default: map_get($obj, default);
+  .panel.panel-line-#{$type} {
+    .panel-heading {
+      .panel-title {
+        color: map_get($default, bg-color);
+      }
+    }
+  }
+}
+
+@each $type, $obj in $panel-skin {
+  $default: map_get($obj, default);
+  .panel.panel-#{$type} {
+    border-color: map-get($default, bd-color);
+    .panel-heading {
+      background-color: map-get($default, bg-color);
+      .panel-title {
+        color: map_get($default, ft-color);
+      }
+    }
+
+    .panel-heading, .panel-footer {
+      border-color: map-get($default, bd-color);
+    }
+  }
+}
