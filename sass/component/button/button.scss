@@ -17,6 +17,9 @@ $default-size: $md;
 
 // 按钮组
 .btn-group {
+  >* {
+    @include inline-block;
+  }
   .btn {
     float: left;
     @include border-radius(0);
@@ -40,7 +43,7 @@ $default-size: $md;
 
   &.btn-spacing {
     >* {
-      @include inline-block();
+      @include float-left;
       margin-left: 0;
       @include border-radius($btn-border-radius);
       margin-right: $features-spacing;

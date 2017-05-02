@@ -1,24 +1,51 @@
 @import "compass/css3";
 @import "../variables/global";
 
+$menu-icon-size: 18px;
+$menu-icon-space: 20px;
+
+$menu-lh: 30px;
+
+$menu-active-border-width: 4px;
 
 .menu {
+  background-color: $base-withe;
   .menu-title {
     font-size: 14px;
-    line-height: 20px;
+    line-height: $menu-lh;
 
     .icon {
-      width: 16px;
-      height: 16px;
-      margin-right: 10px;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      margin-right: $menu-icon-space;
+      margin-left: $menu-icon-space - $menu-active-border-width;
       color: $base-blue;
     }
   }
 
   > ul {
-    margin-bottom: 20px;
+    padding: 10px 0;
+    border-left-width: $menu-active-border-width;
+    border-style: solid;
+    border-color: transparent;
     > li {
-      padding-left: 28px;
+      display: none;
+      line-height: $menu-lh;
+      font-size: $font-size-base;
+      padding-left: $menu-icon-space * 2 + $menu-icon-size - $menu-active-border-width;
+    }
+
+    &.active {
+      border-color: $base-blue;
+      background-color: $base-gray-light;
+
+      > li {
+        display: block;
+
+        &.active {
+          color: $base-blue;
+        }
+      }
     }
   }
 }

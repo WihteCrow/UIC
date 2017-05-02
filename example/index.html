@@ -24,6 +24,7 @@
     <link rel="styleSheet" href="../stylesheets/doc/doc.css">
     <link rel="styleSheet" href="../stylesheets/uic.css">
     <script src="//at.alicdn.com/t/font_08pph4t1sya54s4i.js"></script>
+    <script src="echarts.common.min.js"></script>
   </head>
   <body>
     <div class="doc-section">
@@ -44,14 +45,14 @@
               <li><a>排行榜</a></li>
               <li><a>明星产品</a></li>
             </ul>
-            <ul>
+            <ul class="active">
               <div class="menu-title">
                 <svg aria-hidden="true" class="icon">
                   <use xlink:href="#icon-fenxiao"></use>
                 </svg>分销
               </div>
               <li><a>店铺列表</a></li>
-              <li><a>商品列表</a></li>
+              <li class="active"><a>商品列表</a></li>
               <li><a>价格异动</a></li>
             </ul>
             <ul>
@@ -74,6 +75,133 @@
               <li><a>排行榜</a></li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div class="highlight"></div>
+    </div>
+    <div class="doc-section">
+      <div class="markdown-body"><h2>星云内容面板图</h2>
+      </div>
+    </div>
+    <div class="doc-section">
+      <div class="example">
+        <div class="example-block">
+          <div class="content-header">
+            <div class="content-title">分销价格异动</div>
+            <div class="pull-right">
+              <div class="btn-group btn-spacing">
+                <div class="btn btn-info">导出PDF</div>
+                <div class="btn-group">
+                  <div class="btn btn-info">全部</div>
+                  <div class="btn btn-info btn-single">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#icon-xiala"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <div class="btn btn-info">2017-04-39~2017-05-01</div>
+                  <div class="btn btn-info btn-single">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#icon-xiala"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight"></div>
+    </div>
+    <div class="doc-section">
+      <div class="markdown-body"><h2>星云筛选</h2>
+      </div>
+    </div>
+    <div class="doc-section">
+      <div class="example">
+        <div class="example-block">
+          <div class="btn-group">分组：
+            <div class="btn-group">
+              <div class="btn btn-info">分销（授权）</div>
+              <div class="btn btn-info btn-single">
+                <svg aria-hidden="true" class="icon">
+                  <use xlink:href="#icon-xiala"></use>
+                </svg>
+              </div>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;类目：
+            <div class="btn-group">
+              <div class="btn btn-info">打印机</div>
+              <div class="btn btn-info btn-single">
+                <svg aria-hidden="true" class="icon">
+                  <use xlink:href="#icon-xiala"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-block">
+          <div>平台：
+            <div class="tab tab-line-primary tab-line-sm inline-block">
+              <div class="tab-title">
+                <div class="tab-item">全部</div>
+                <div class="tab-item active">天猫</div>
+                <div class="tab-item">淘宝</div>
+                <div class="tab-item">京东</div>
+                <div class="tab-item">亚马逊</div>
+                <div class="tab-item">一号店</div>
+                <div class="tab-item">唯品会</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-block">
+          <div class="clearfix">
+            <div class="pull-left">
+              <div class="select">
+                <div class="selected-bar"><span class="selected-text">标记为</span>
+                  <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#icon-xiala"></use>
+                  </svg>
+                </div>
+              </div>&nbsp;&nbsp;对比&nbsp;
+              <div class="select">
+                <div class="selected-bar"><span class="selected-text">成交金额</span>
+                  <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#icon-xiala"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right">
+              <div class="btn-group btn-primary">
+                <div class="btn btn-info btn-single">日</div>
+                <div class="btn btn-info btn-single">周</div>
+                <div class="btn btn-info btn-single active">月</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-block">
+          <div class="search"><input class="input" placeholder="搜索你感兴趣的内容…"/>
+            <button class="btn btn-primary">搜索</button>
+            <button class="btn btn-link">高级</button>
+          </div>
+        </div>
+      </div>
+      <div class="highlight"></div>
+    </div>
+    <div class="doc-section">
+      <div class="markdown-body"><h2>星云ECHART</h2>
+      </div>
+    </div>
+    <div class="doc-section">
+      <div class="example">
+        <div class="example-block">
+          <div id="graphCharts" style="height: 300px"></div>
+        </div>
+        <div class="example-block">
+          <div id="pieCharts" style="height: 300px"></div>
         </div>
       </div>
       <div class="highlight"></div>
@@ -795,5 +923,6 @@
       </div>
       <div class="highlight"></div>
     </div><p>[TOC]</p>
+    <script src="echarts.js"></script>
   </body>
 </html>

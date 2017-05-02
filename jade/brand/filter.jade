@@ -1,0 +1,56 @@
+.doc-section
+    .markdown-body
+        :markdown
+            ##星云筛选
+.doc-section
+    .example
+        .example-block
+            .btn-group
+                | 分组：
+                .btn-group
+                    .btn.btn-info 分销（授权）
+                    .btn.btn-info.btn-single
+                        svg.icon(aria-hidden="true")
+                            use(xlink:href="#icon-xiala")
+                | &nbsp;&nbsp;&nbsp;&nbsp;类目：
+                .btn-group
+                    .btn.btn-info 打印机
+                    .btn.btn-info.btn-single
+                        svg.icon(aria-hidden="true")
+                            use(xlink:href="#icon-xiala")
+        .example-block
+            div 平台：
+                .tab.tab-line-primary.tab-line-sm.inline-block
+                    .tab-title
+                        .tab-item 全部
+                        .tab-item.active 天猫
+                        .tab-item 淘宝
+                        .tab-item 京东
+                        .tab-item 亚马逊
+                        .tab-item 一号店
+                        .tab-item 唯品会
+        .example-block
+            .clearfix
+                .pull-left
+                    .select
+                        .selected-bar
+                            span.selected-text 标记为
+                            svg.icon(aria-hidden="true")
+                                use(xlink:href="#icon-xiala")
+                    | &nbsp;&nbsp;对比&nbsp;
+                    .select
+                        .selected-bar
+                            span.selected-text 成交金额
+                            svg.icon(aria-hidden="true")
+                                use(xlink:href="#icon-xiala")
+                .pull-right
+                    .btn-group.btn-primary
+                        .btn.btn-info.btn-single 日
+                        .btn.btn-info.btn-single 周
+                        .btn.btn-info.btn-single.active 月
+        .example-block
+                .search
+                    <input class="input" placeholder="搜索你感兴趣的内容…"/>
+                    button.btn.btn-primary 搜索
+                    button.btn.btn-link 高级
+    .highlight

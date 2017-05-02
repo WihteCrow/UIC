@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import "compass/utilities";
 @import "variables/global";
 
 body {
@@ -11,9 +12,21 @@ body {
   @include inline-block;
 }
 
+.clearfix {
+  @include clearfix;
+}
+
 .icon {
   width: 16px; height: 16px;
   fill: currentColor;
   overflow: hidden;
   vertical-align: -0.15em;
+}
+
+.pull-right {
+  @include float-right;
+}
+
+.pull-left {
+  @include float-left;
 }

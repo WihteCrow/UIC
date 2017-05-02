@@ -1,0 +1,21 @@
+@import "compass/utilities";
+@import "../variables/global";
+
+
+.content-header {
+  background-color: $base-gray;
+  padding: 14px 18px;
+  line-height: $base-line-height;
+  border-color: $base-gray-dark;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  .content-title {
+    @include float-left;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  @include clearfix;
+}
