@@ -23,6 +23,7 @@ $default-size: $md;
       cursor: pointer;
       @include init-border;
       float: left;
+      color: $base-black-light;
 
       > * {
         vertical-align: baseline;

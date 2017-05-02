@@ -10,6 +10,9 @@ $input-size: (lg, $lg), (md, $md), (sm, $sm), (single, $single);
   @include inline-block;
   @include features-size(map_get($md, vertical), map_get($md, horizontal) - 6px, map_get($md, fz), map_get($md, lh));
   height: map_get($md, lh);
+  @include input-placeholder{
+    color: $base-black-lighter-light
+  };
   &:focus {
     outline: 0;
   }

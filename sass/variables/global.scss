@@ -103,12 +103,12 @@ $info: (
         default: (
                 bg-color: $base-withe,
                 bd-color: $base-gray-dark,
-                ft-color: $base-black
+                ft-color: $base-black-light
         ),
         hover: (
                 bg-color: $base-gray,
                 bd-color: $base-gray-dark,
-                ft-color: $base-black
+                ft-color: $base-black-light
         )
 );
 
@@ -116,12 +116,12 @@ $secondary: (
         default: (
                 bg-color: $base-gray,
                 bd-color: $base-gray-dark,
-                ft-color: $base-black
+                ft-color: $base-black-light
         ),
         hover: (
                 bg-color: $base-gray-dark,
                 bd-color: $base-gray-dark,
-                ft-color: $base-black
+                ft-color: $base-black-light
         )
 );
 

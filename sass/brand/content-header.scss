@@ -12,6 +12,7 @@
   border-bottom-width: 1px;
 
   .content-title {
+    color: $base-black;
     @include float-left;
     font-size: 18px;
     font-weight: 700;
