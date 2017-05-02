@@ -4,6 +4,12 @@
 
 $input-size: (lg, $lg), (md, $md), (sm, $sm), (single, $single);
 
+.search {
+  > .input{
+    width: 240px;
+  }
+}
+
 // 初始化
 .input {
   @include round-box($input-border-color, $border-radius);

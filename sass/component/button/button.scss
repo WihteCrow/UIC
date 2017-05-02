@@ -84,6 +84,12 @@ $default-size: $md;
   }
 }
 
+a.btn{
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // 按钮尺寸
 @each $type, $obj in $button-size {
   .btn.btn-#{$type} {
