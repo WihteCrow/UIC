@@ -1,0 +1,95 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+@import "variables";
+@import "mixins";
+
+$tab-line-skin: (primary, $primary),
+        (info, $info),
+        (secondary, $secondary),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger),
+        (link, $link);
+
+$tab-size: (lg, $lg, 10px), (md, $md, 8px,), (sm, $sm, 6px);
+$default-size: $md;
+
+.tab {
+  .tab-title {
+    @include user-select-none;
+    .tab-item {
+      position: relative;
+      cursor: pointer;
+      @include init-border;
+      float: left;
+
+      > * {
+        vertical-align: baseline;
+      }
+    }
+
+    @include clearfix;
+  }
+}
+
+.tab-item-bold {
+  font-weight: 700;
+}
+
+
+.tab-border {
+  .tab-title {
+    .tab-item {
+      @include init-border;
+
+      &.active {
+
+      }
+    }
+  }
+}
+
+// tab-line 配套使用
+
+// 尺寸
+@each $type, $obj, $space in $tab-size {
+  .tab.tab-line-#{$type} {
+    .tab-title {
+      .tab-item {
+        @include tab-line-size(map_get($obj, vertical),
+                map_get($obj, horizontal),
+                map_get($obj, fz),
+                map_get($obj, ln), $space);
+      }
+    }
+  }
+
+  .tab.tab-#{$type} {
+    .tab-title {
+      .tab-item {
+        @include features-size(map_get($obj, vertical),
+                map_get($obj, horizontal),
+                map_get($obj, fz),
+                map_get($obj, ln));
+      }
+    }
+  }
+}
+
+// 皮肤
+@each $type, $obj in $tab-line-skin {
+  $default: map_get($obj, default);
+  .tab.tab-line-#{$type} {
+    .tab-title {
+      .tab-item.active, .tab-item:hover {
+        color: map_get($default, bd-color);
+        border-bottom-color: map_get($default, bd-color);
+      }
+    }
+  }
+
+  .tab.tab-#{$type} {
+    @include tab-skin(map_get($default, bd-color), map_get($default, bd-color), map_get($default, ft-color));
+  }
+}

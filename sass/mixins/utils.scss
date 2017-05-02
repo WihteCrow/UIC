@@ -154,3 +154,9 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+@mixin init-border($width: 1px, $type: solid, $color: transparent) {
+  border-width: $width;
+  border-style: $type;
+  border-color: $color;
+}

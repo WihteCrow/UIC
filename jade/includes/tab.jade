@@ -2,134 +2,73 @@
     .markdown-body
         :markdown
             ##Tab 切换
-.doc-section
-    .markdown-body
-        :markdown
-            ### 类型
-            - 默认类型
-            - 切换按钮带 border
-            - 切换按钮不带 border
     .example
-        .tab
-            ul.tab-title.clearfix
-                li.active(data-type="#tab1" data-toggle="tab")
-                    a(href="javascript:;") Tab1
-                li(data-type="#tab2" data-toggle="tab")
-                    a(href="javascript:;") Tab2
-                li(data-type="#tab3" data-toggle="tab")
-                    a(href="javascript:;") Tab3
-            .tab-content
-                .tab-pane.active#tab1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dicta vitae adipisci architecto praesentium totam, sequi. Ducimus provident, accusamus ab ipsam sint quod dicta expedita maiores, commodi, praesentium similique quae.
-                .tab-pane#tab2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
-                .tab-pane#tab3  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
+        .example-block
+            .tab.tab-line-primary.tab-line-lg
+                .tab-title
+                    .tab-item 全部
+                    .tab-item.active 天猫
+                    .tab-item
+                        | 淘宝
+                        span.badge.badge-danger.badge-lg 99+
+                    .tab-item 京东
+                    .tab-item 亚马逊
+                    .tab-item 一号店
+                    .tab-item 唯品会
+        .example-block
+            .tab.tab-line-danger.tab-line-md
+                .tab-title
+                    .tab-item 全部
+                    .tab-item.active
+                        | 天猫
+                    .tab-item
+                        | 淘宝
+                        span.badge.badge-danger.badge-md 1
+                    .tab-item 京东
+                    .tab-item 亚马逊
+                    .tab-item 一号店
+                    .tab-item 唯品会
+        .example-block
+            .tab.tab-line-warn.tab-line-sm
+                .tab-title
+                    .tab-item 全部
+                    .tab-item.active 天猫
+                    .tab-item
+                        | 淘宝
+                        span.badge.badge-danger.badge-sm 87
+                    .tab-item 京东
+                    .tab-item 亚马逊
+                    .tab-item 一号店
+                    .tab-item 唯品会
+        .example-block
+            .tab.tab-info.tab-md
+                .tab-title
+                    .tab-item.active Tab1
+                    .tab-item Tab2
+                    .tab-item Tab3
+                .tab-content
+                    .tab-pane.active 韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  $韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+        .example-block
+            .tab.tab-border
+                ul.tab-title
+                    .tab-item.tab-item-bold.active Tab1
+                    .tab-item.tab-item-bold Tab2
+                    .tab-item.tab-item-bold Tab3
+                .tab-content
+                    .tab-pane.active  韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  $韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  $韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+        .example-block
+            .tab.tab-bordernon
+                ul.tab-title
+                    .tab-item.tab-item-bold.active Tab1
+                    .tab-item.tab-item-bold Tab2
+                    .tab-item.tab-item-bold Tab3
+                .tab-content
+                    .tab-pane.active  韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  $韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
+                    .tab-pane  $韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流韩版毛线围巾女冬季韩国学生百搭针织长款加厚大红色围巾冬天潮流
     .highlight
-        pre
-            code.lang-html
-                :highlight
-                    <div class="tab">
-                        <ul class="tab-title">
-                            <li class="active" data-type="#tab1" data-toggle="tab">
-                                <a href="javascript:;">Tab1</a>
-                            </li>
-                            <li data-type="#tab2" data-toggle="tab">
-                                <a href="javascript:;">Tab2</a>
-                            </li>
-                            <li data-type="#tab3" data-toggle="tab">
-                                <a href="javascript:;">Tab3</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tab1">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto magni nihil nam vel quidem rerum reiciendis, omnis quas minima, excepturi perferendis esse velit blanditiis dolorem beatae quod itaque odit.
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                            <div class="tab-pane" id="tab3">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                        </div>
-                    </div>
-    .example
-        .tab.tab-border
-            ul.tab-title
-                li.active(data-type="#tab4" data-toggle="tab")
-                    a(href="javascript:;") Tab1
-                li(data-type="#tab5" data-toggle="tab")
-                    a(href="javascript:;") Tab2
-                li(data-type="#tab6" data-toggle="tab")
-                    a(href="javascript:;") Tab3
-            .tab-content
-                .tab-pane.active#tab4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dicta vitae adipisci architecto praesentium totam, sequi. Ducimus provident, accusamus ab ipsam sint quod dicta expedita maiores, commodi, praesentium similique quae.
-                .tab-pane#tab5  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
-                .tab-pane#tab6  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
-    .highlight
-        pre
-            code.lang-html
-                :highlight
-                    <div class="tab tab-border">
-                        <ul class="tab-title clearfix">
-                            <li class="active" data-type="#tab1" data-toggle="tab">
-                                <a href="javascript:;">Tab1</a>
-                            </li>
-                            <li  data-type="#tab2" data-toggle="tab">
-                                <a href="javascript:;">Tab2</a>
-                            </li>
-                            <li data-type="#tab3" data-toggle="tab">
-                                <a href="javascript:;">Tab3</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tab1">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto magni nihil nam vel quidem rerum reiciendis, omnis quas minima, excepturi perferendis esse velit blanditiis dolorem beatae quod itaque odit.
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                            <div class="tab-pane" id="tab3">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                        </div>
-                    </div>
-    .example
-        .tab.tab-bordernon
-            ul.tab-title.clearfix
-                li.active(data-type="#tab7" data-toggle="tab")
-                    a(href="javascript:;") Tab1
-                li(data-type="#tab8" data-toggle="tab")
-                    a(href="javascript:;") Tab2
-                li(data-type="#tab9" data-toggle="tab")
-                    a(href="javascript:;") Tab3
-            .tab-content
-                .tab-pane.active#tab7  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dicta vitae adipisci architecto praesentium totam, sequi. Ducimus provident, accusamus ab ipsam sint quod dicta expedita maiores, commodi, praesentium similique quae.
-                .tab-pane#tab8  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
-                .tab-pane#tab9  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptas officiis aliquam doloremque voluptatibus odio, asperiores aut saepe, nobis, ea obcaecati et deserunt nemo sed consectetur dicta sit. Assumenda, natus.
-    .highlight
-        pre
-            code.lang-html
-                :highlight
-                    <div class="tab tab-bordernon">
-                        <ul class="tab-title clearfix">
-                            <li class="" data-type="#tab1" data-toggle="tab">
-                                <a href="javascript:;">Tab1</a>
-                            </li>
-                            <li class="" data-type="#tab2" data-toggle="tab">
-                                <a href="javascript:;">Tab2</a>
-                            </li>
-                            <li class="" data-type="#tab3" data-toggle="tab">
-                                <a href="javascript:;">Tab3</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tab1">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iusto magni nihil nam vel quidem rerum reiciendis, omnis quas minima, excepturi perferendis esse velit blanditiis dolorem beatae quod itaque odit.
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                            <div class="tab-pane" id="tab3">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas nemo, cum, illum sunt repudiandae dolorem nostrum ullam expedita minima omnis maiores aperiam. Voluptatibus nemo perspiciatis autem odit nam. Iure!
-                            </div>
-                        </div>
-                    </div>
 

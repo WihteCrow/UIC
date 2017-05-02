@@ -1,0 +1,30 @@
+@import "../../mixins/utils";
+
+
+@mixin tab-line-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $space) {
+  padding: $padding-vertical $space;
+  margin: 0 $padding-horizontal - $space;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin tab-skin($background, $border, $text-color) {
+  @if $background != null {
+    background-color: $background;
+  }
+
+  border-width: 1px;
+  border-style: solid;
+  @if($border != null) {
+    border-color: $border;
+  } @else {
+    border-color: transparent;
+  }
+
+  color: $text-color;
+  label{
+    span:before {
+      color: $text-color;
+    }
+  }
+}

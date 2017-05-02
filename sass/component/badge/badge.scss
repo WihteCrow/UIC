@@ -1,0 +1,40 @@
+@import "compass/css3";
+@import "../../variables/global";
+@import "../../mixins/utils";
+
+$badge-skin: (primary, $primary),
+        (info, $info),
+        (secondary, $secondary),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger);
+
+$badge-size: (lg, $lg, 2px), (md, $md, 1px), (sm, $sm, 0);
+
+.badge {
+  // 颜色继承父元素
+  @include inline-block;
+  @include init-border;
+  text-align: center;
+}
+
+// 尺寸
+@each $type, $obj, $pd in $badge-size{
+  .badge.badge-#{$type} {
+    @include features-size($pd, $pd,
+            map_get($obj, fz),
+            map_get($obj, lh));
+    min-width: map_get($obj, lh);
+    @include border-radius(map_get($obj, lh));
+  }
+}
+
+// 皮肤
+@each $type, $obj in $badge-skin {
+  $default: map_get($obj, default);
+  .badge.badge-#{$type} {
+    border-color: map_get($default, bd-color);
+    background-color: map_get($default, bg-color);
+    color: map_get($default, ft-color);
+  }
+}
