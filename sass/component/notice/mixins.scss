@@ -3,10 +3,8 @@
 @mixin notice-size($default-size) {
   min-width: $default-size * 3;
   .icon {
-    line-height: $default-size * 2;
-    .iconfont {
-      font-size: $default-size * 2;
-    }
+    width: $default-size * 2;
+    height: $default-size * 2;
   }
 
   .badge {

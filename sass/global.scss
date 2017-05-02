@@ -10,3 +10,10 @@ body {
 .inline-block {
   @include inline-block;
 }
+
+.icon {
+  width: 16px; height: 16px;
+  fill: currentColor;
+  overflow: hidden;
+  vertical-align: -0.15em;
+}

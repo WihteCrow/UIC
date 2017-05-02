@@ -1,0 +1,24 @@
+@import "compass/css3";
+@import "../variables/global";
+
+
+.menu {
+  .menu-title {
+    font-size: 14px;
+    line-height: 20px;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      color: $base-blue;
+    }
+  }
+
+  > ul {
+    margin-bottom: 20px;
+    > li {
+      padding-left: 28px;
+    }
+  }
+}

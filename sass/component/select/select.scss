@@ -30,16 +30,10 @@ $default-size: $md;
       margin-right: $features-spacing;
     }
 
-    .icon-down, .icon-up {
+    .icon {
       float: right;
-      font-size: $select-icon-size;
-    }
-    .icon-down:before{
-      content: $select-icon-down;
-    }
-
-    .icon-up:before{
-      content: $select-icon-up;
+      width: $select-icon-size;
+      height: $select-icon-size;
     }
 
     @include clearfix;
@@ -71,10 +65,9 @@ $default-size: $md;
       z-index: 1;
       right: 4px;
       top: 50%;
-      margin-top: -8px;
-      .iconfont {
-        font-size: $font-size-base;
-      }
+      margin-top: -$font-size-base / 2;
+      width: $font-size-base;
+      height: $font-size-base;
     }
   }
 }

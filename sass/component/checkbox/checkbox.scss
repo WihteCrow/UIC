@@ -11,28 +11,12 @@ $checkbox-size: (lg, $checkbox-lg), (md, $checkbox-md), (sm, $checkbox-sm);
   cursor: pointer;
 
   // 未选中
-  > span:first-child:before {
-    content: $checkbox-type;
+  > .icon {
     color: $checkbox-color-primary;
     margin-right: 2px;
     background: none;
-    font-family: $icon-font-family;
-    font-size: $font-size-base + 2px;
-    @include inline-block;
-  }
-
-  // 半选
-  &.half-checked {
-    > span:first-child:before {
-      content: $checkbox-type-half-checked;
-    }
-  }
-
-  // 选中
-  &.checked {
-    > span:first-child:before {
-      content: $checkbox-type-checked;
-    }
+    width: $font-size-base + 1px;
+    height: $font-size-base + 1px;
   }
 
   @include disabled;
@@ -42,9 +26,9 @@ $checkbox-size: (lg, $checkbox-lg), (md, $checkbox-md), (sm, $checkbox-sm);
 @each $type, $obj in $checkbox-size {
   .checkbox-#{$type} {
     font-size: map_get($obj, size);
-    line-height: map_get($obj, height) + 2px;
-    > span:first-child:before {
-      font-size: map_get($obj, size) + 2px;
+    > .icon {
+      width: map_get($obj, size) + 1px;
+      height: map_get($obj, size) + 1px;
     }
   }
 }

@@ -22,8 +22,9 @@ $default-size: $md;
     @include border-radius(0);
     margin-left: -1px;
 
-    .iconfont {
-      font-size: $font-size-base;
+    .icon {
+      width: $font-size-base;
+      height: $font-size-base;
     }
   }
 
