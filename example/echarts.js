@@ -15,7 +15,7 @@ var option_01 = {
         show: false,
     },
     grid: {
-        left: '3%',
+        left: '2%',
         right: '5%',
         bottom: '3%',
         show: true,
@@ -32,12 +32,13 @@ var option_01 = {
             }
         },
         axisTick: {
-            length: 0
+            length: 10
         },
         axisLabel: {
             textStyle: {
                 color: '#787878'
-            }
+            },
+            margin: 14
         },
         splitLine: {
             show: true,
@@ -77,7 +78,14 @@ var option_01 = {
                 color: '#95B7DB'
             }
         },
-        data: [120, 132, 40, 134, 90, 230, 210]
+        data: [120, 132, 40, 134, 90, 230, 210],
+        markArea: {
+            data: [ [{
+                xAxis: '2017-04-03'
+            }, {
+                xAxis: '2017-04-04'
+            }] ]
+        }
     }, {
         name: '联盟广告',
         type: 'line',
@@ -143,3 +151,24 @@ var option_02 = {
 
 graphCharts.setOption(option_01);
 pieCharts.setOption(option_02);
+
+var xAxis = document.getElementById("xAxis");
+var positions = _.values(graphCharts._chartsMap)[0]._points;
+
+var fistPosition = positions[0];
+var lastPosition = positions[positions.length - 1];
+
+xAxis.style.left = fistPosition[0] + 'px';
+xAxis.style.width = lastPosition[0] - fistPosition[0] + 'px';
+
+xAxis.appendChild(getXAxisItemActive(2));
+
+
+function getXAxisItemActive(index) {
+    var item = document.createElement('div');
+    item.className = 'xAxis-item';
+    item.innerText = "双十二";
+    item.style.left = positions[index][0] - fistPosition[0] + 'px';
+    item.style.width = positions[index+1][0] - positions[index][0] + 'px';
+    return item;
+}

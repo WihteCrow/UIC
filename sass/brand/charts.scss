@@ -1,0 +1,21 @@
+@import "compass/css3";
+@import "../variables/global";
+
+.charts {
+  position: relative;
+
+  .xAxis {
+    position: absolute;
+    height: 10px;
+    bottom: 25px;
+    background-color: $base-gray;
+  }
+
+  .xAxis-item {
+    position: absolute;
+    border-bottom: 10px solid $base-blue;
+    text-align: center;
+    bottom: 0;
+    color: $base-gray;
+  }
+}

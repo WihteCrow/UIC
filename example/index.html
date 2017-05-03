@@ -23,8 +23,9 @@
     <link rel="stylesheet" href="../node_modules/highlight.js/styles/default.css">
     <link rel="styleSheet" href="../stylesheets/doc/doc.css">
     <link rel="styleSheet" href="../stylesheets/uic.css">
-    <script src="//at.alicdn.com/t/font_08pph4t1sya54s4i.js"></script>
+    <script src="//at.alicdn.com/t/font_i33s3onvtg0q9f6r.js"></script>
     <script src="echarts.common.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </head>
   <body>
     <div class="doc-section">
@@ -199,7 +200,10 @@
     <div class="doc-section">
       <div class="example">
         <div class="example-block">
-          <div id="graphCharts" style="height: 300px"></div>
+          <div class="charts">
+            <div id="graphCharts" style="height: 300px"></div>
+            <div id="xAxis" class="xAxis"></div>
+          </div>
         </div>
         <div class="example-block">
           <div id="pieCharts" style="height: 300px"></div>
@@ -214,6 +218,15 @@
     <div class="doc-section">
       <div class="example">
         <div class="example-block">
+          <svg aria-hidden="true" class="icon">
+            <use xlink:href="#icon-sou"></use>
+          </svg>
+          <svg aria-hidden="true" class="icon">
+            <use xlink:href="#icon-biaoge"></use>
+          </svg>
+          <svg aria-hidden="true" class="icon">
+            <use xlink:href="#icon-iconfontcolor55"></use>
+          </svg>
           <svg aria-hidden="true" class="icon">
             <use xlink:href="#icon-xiala-copy"></use>
           </svg>
