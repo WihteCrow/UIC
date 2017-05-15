@@ -5,9 +5,13 @@
 @import "../../mixins/utils";
 
 $msg-type: (info, $msg-info),
+        (secondary, $msg-secondary),
         (success, $msg-success),
         (warn, $msg-warn),
         (error, $msg-error);
+
+$msg-size: (sm, $msg-sm),
+        (lg, $msg-lg);
 
 .msg, .msg-box{
   position: relative;
@@ -43,6 +47,12 @@ $msg-type: (info, $msg-info),
   display: block;
   padding: $msg-padding-vertical $msg-padding-horizontal;
   @include round-box(null, $msg-border-radius);
+}
+
+@each $type, $obj in $msg-size {
+  .msg.msg-#{$type}, .msg-box.msg-#{$type} {
+    font-size: map_get($obj, fz);
+  }
 }
 
 

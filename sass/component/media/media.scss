@@ -1,0 +1,31 @@
+@import "../../mixins/utils";
+
+.media, .meida-body {
+  @include clearfix;
+}
+.media-left, .media-right, .media-body{
+  display: table-cell;
+  vertical-align: top;
+}
+.media-left {
+  padding-right: 10px;
+  &>.pull-left {
+    padding-right: 10px;
+  }
+}
+.media-right {
+  padding-left: 10px;
+  &>.pull-right {
+    padding-left: 10px;
+  }
+}
+.media-top {
+  margin-bottom: 10px;
+}
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.media-body  .label {
+  line-height: 2;
+}

@@ -20,7 +20,7 @@ $default-size: $md;
   >* {
     @include inline-block;
   }
-  .btn {
+  > .btn{
     float: left;
     @include border-radius(0);
     margin-left: -1px;
@@ -51,6 +51,20 @@ $default-size: $md;
     @include clearfix;
   }
   @include clearfix;
+}
+
+.btn-group .btn-group {
+  > .select {
+    float: left;
+    margin-left: -1px;
+    > .selected-bar {
+      @include border-radius(0);
+
+      &.active, &:hover, &:active, &:focus {
+        @include border-radius(0);
+      }
+    }
+  }
 }
 
 .btn {

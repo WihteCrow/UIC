@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "compass/utilities";
+@import "./mixins/utils";
 @import "variables/global";
 
 body {
@@ -24,10 +25,26 @@ body {
   vertical-align: -0.15em;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .pull-right {
   @include float-right;
 }
 
 .pull-left {
   @include float-left;
+}
+
+.features-spacing-bottom {
+  margin-bottom: $features-spacing;
+}
+
+.component-spacing-bottom {
+  margin-bottom: $component-spacing;
+}
+
+.disabled {
+  @include disabled;
 }

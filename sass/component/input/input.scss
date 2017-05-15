@@ -24,6 +24,25 @@ $input-size: (lg, $lg), (md, $md), (sm, $sm), (single, $single);
   }
 }
 
+
+.input-group {
+  > .input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  > .input-group-addon {
+    @include round-box($input-border-color, $border-radius);
+    @include inline-block;
+    @include features-size(map_get($md, vertical), map_get($md, horizontal) - 6px, map_get($md, fz), map_get($md, lh));
+    height: map_get($md, lh);
+    margin-left: -1px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: $input-group-addon-bg;
+    @include user-select-none;
+  }
+}
+
 // 选框尺寸
 @each $type, $obj in $input-size {
   .input.input-#{$type} {

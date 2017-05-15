@@ -92,6 +92,17 @@
   @include border-radius($radius);
 }
 
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 // 特效
 @mixin effect-shadow {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);

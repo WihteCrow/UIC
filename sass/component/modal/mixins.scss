@@ -3,12 +3,16 @@
 
 
 @mixin dialog-base($width, $height, $title-height: 35px, $button-height: 40px) {
-  //position: fixed;
+  position: fixed;
   background: $base-withe;
   width: $width;
   min-height: $height;
   padding: 0 $dialog-padding;
   border-radius: $border-radius;
+
+  left: 50%;
+  margin-left: -$width / 2;
+
   .title-bar {
     position: relative;
     .title {

@@ -17,6 +17,7 @@ $default-size: $md;
   cursor: pointer;
   white-space: nowrap;
   text-align: left;
+  height: map_get($default-size, vertical) * 2 + map_get($default-size, lh) + 2px;
 
   .selected-bar{
     @include features-size(map_get($default-size, vertical), map_get($default-size, horizontal), map_get($default-size, fz), map_get($default-size, lh));
@@ -37,6 +38,33 @@ $default-size: $md;
     }
 
     @include clearfix;
+  }
+
+  .select-items {
+    display: none;
+    margin-top: 2px;
+    position: relative;
+    max-height: 173px;
+    overflow-y: auto;
+    @include layer-index(1);
+    @include select-items-style($default);
+    .select-item {
+      @include features-size(map_get($default-size, vertical), map_get($default-size, horizontal) - 1px, map_get($default-size, fz), map_get($default-size, lh));
+
+      &.active, &:hover, &:active, &:focus {
+        background-color: map_get($hover, bg-color);
+      }
+
+      &.disabled {
+        @include disabled
+      }
+    }
+  }
+
+  &.active{
+    .select-items{
+      display: block;
+    }
   }
 }
 
@@ -77,6 +105,12 @@ $default-size: $md;
   .select.select-#{$type} {
     .selected-bar {
       @include features-size(map_get($obj, vertical), map_get($obj, horizontal), map_get($obj, fz), map_get($obj, lh));
+    }
+
+    .select-items {
+      .select-item {
+        @include features-size(map_get($obj, vertical), map_get($obj, horizontal) - 1px, map_get($obj, fz), map_get($obj, lh));
+      }
     }
   }
 }

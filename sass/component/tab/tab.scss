@@ -16,6 +16,7 @@ $tab-size: (lg, $lg, 10px), (md, $md, 8px,), (sm, $sm, 6px);
 $default-size: $md;
 
 .tab {
+  background-color: $base-withe;
   .tab-title {
     @include user-select-none;
     .tab-item {
@@ -29,8 +30,17 @@ $default-size: $md;
         vertical-align: baseline;
       }
     }
-
     @include clearfix;
+  }
+
+  .tab-content {
+    .tab-pane{
+      display: none;
+      padding: $component-spacing;
+      &.active{
+        display: block;
+      }
+    }
   }
 }
 
@@ -41,12 +51,28 @@ $default-size: $md;
 
 .tab-border {
   .tab-title {
+    position: relative;
+
     .tab-item {
       @include init-border;
-
+      @include border-radius($border-radius $border-radius 0 0);
+      border-color: $base-gray-dark;
+      margin-right: $component-spacing;
       &.active {
-
+        border-bottom-color: $base-withe;
+        @include layer-index(1);
       }
+      &:first-child {
+        margin-left: $component-spacing;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $base-gray-dark;
+      position: absolute;
+      bottom:0;
     }
   }
 }

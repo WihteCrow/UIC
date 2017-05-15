@@ -28,6 +28,7 @@
     "grunt-jsdoc": "^0.6.8",
     "jade": "^1.11.0",
     "jstransformer-highlight": "^1.0.1",
-    "jstransformer-markdown": "^1.1.0"
+    "jstransformer-markdown": "^1.1.0",
+    "webpack": "^2.4.1"
   }
 }

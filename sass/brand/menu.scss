@@ -14,13 +14,13 @@ $menu-active-border-width: 4px;
   .menu-title {
     font-size: 14px;
     line-height: $menu-lh;
+    cursor: pointer;
 
     .icon {
       width: $menu-icon-size;
       height: $menu-icon-size;
       margin-right: $menu-icon-space;
       margin-left: $menu-icon-space - $menu-active-border-width;
-      color: $base-blue;
     }
   }
 
@@ -30,6 +30,7 @@ $menu-active-border-width: 4px;
     border-style: solid;
     border-color: transparent;
     > li {
+      cursor: pointer;
       display: none;
       line-height: $menu-lh;
       font-size: $font-size-base;
@@ -40,11 +41,28 @@ $menu-active-border-width: 4px;
       border-color: $base-blue;
       background-color: $base-gray-light;
 
+      .menu-title {
+        .icon {
+          color: $base-blue;
+        }
+      }
+
       > li {
         display: block;
-
+        color: $base-black-light;
         &.active {
           color: $base-blue;
+        }
+
+        a {
+          color: $base-black-light;
+          text-decoration: none;
+        }
+
+        &.active {
+          a {
+            color: $base-blue;
+          }
         }
       }
     }

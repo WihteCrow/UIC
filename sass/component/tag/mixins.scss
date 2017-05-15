@@ -1,18 +1,18 @@
 @import "../../mixins/utils";
 @import "variables";
 
-@mixin tag-line-skin($color) {
+@mixin tag-line-skin($bd, $bg) {
   background-color: $base-withe;
 
   border-width: 1px;
   border-style: solid;
-  @if($color != null) {
-    border-color: $color;
+  @if($bd != null) {
+    border-color: $bd;
   } @else {
     border-color: transparent;
   }
 
-  color: $color;
+  color: $bg;
 }
 
 @mixin tag-skin($background, $border, $text-color) {

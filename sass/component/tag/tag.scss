@@ -1,9 +1,12 @@
 @import "compass/css3";
+@import "compass/utilities";
+@import "../../mixins/utils";
 
 @import "variables";
 @import "mixins";
 
 $tag-skin: (primary, $primary),
+        (info, $tag-info),
         (secondary, $tag-secondary),
         (success, $success),
         (warn, $warn),
@@ -22,6 +25,46 @@ $default-size: $md;
           map_get($default-size, lh));
 }
 
+.tag-group {
+  >* {
+    @include inline-block;
+  }
+
+  .tag {
+    float: left;
+    @include border-radius(0);
+    margin-left: -1px;
+
+    .icon {
+      width: $font-size-base;
+      height: $font-size-base;
+      cursor: pointer;
+    }
+  }
+
+  .tag:first-child {
+    margin-left: 0;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+  .tag:last-child {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  &.tag-spacing {
+    >* {
+      @include float-left;
+      margin-left: 0;
+      @include border-radius($border-radius);
+      margin-right: $features-spacing;
+      margin-bottom: $features-spacing;
+    }
+    @include clearfix;
+  }
+  @include clearfix;
+}
+
 // 尺寸 内部局横向特殊处理
 @each $type, $obj in $tag-size{
   .tag.tag-#{$type} {
@@ -29,6 +72,14 @@ $default-size: $md;
             map_get($obj, horizontal - 6px),
             map_get($obj, fz),
             map_get($obj, lh));
+    .icon {
+      width: map_get($obj, fz);
+      height:map_get($obj, fz);
+    }
+
+    > .icon {
+      margin-left: map_get($obj, fz)/2;
+    }
   }
 }
 
@@ -36,7 +87,7 @@ $default-size: $md;
 @each $type, $obj in $tag-skin {
   $default: map_get($obj, default);
   .tag.tag-line-#{$type} {
-    @include tag-line-skin(map_get($default, bd-color));
+    @include tag-line-skin(map_get($default, bd-color), map_get($default, bg-color));
 
     @include disabled();
   }
