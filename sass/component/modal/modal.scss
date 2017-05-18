@@ -72,11 +72,12 @@
 .modal.popup {
   .modal-form {
     @include dialog-base(180px, 190px, 0);
+    border: 1px solid $border-color;
     .title-bar {
       border-bottom: 0;
     }
     .content {
-      padding: $modal-padding 0 0 0;
+      padding: $modal-padding / 2;
     }
     .button-pane {
       text-align: left;

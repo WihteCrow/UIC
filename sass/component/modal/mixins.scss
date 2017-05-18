@@ -6,12 +6,8 @@
   position: fixed;
   background: $base-withe;
   width: $width;
-  min-height: $height;
-  padding: 0 $dialog-padding;
   border-radius: $border-radius;
-
   left: 50%;
-  margin-left: -$width / 2;
 
   .title-bar {
     position: relative;
@@ -30,10 +26,6 @@
       right: 0;
       text-align: right;
     }
-  }
-  // 正文内容 需要覆盖
-  .content {
-    min-height: $height - $title-height - $button-height;
   }
   // 按钮组
   .button-pane {
