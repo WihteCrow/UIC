@@ -17,9 +17,9 @@ $default-size: $md;
 
 .tab {
   background-color: $base-withe;
-  .tab-title {
+  > .tab-title {
     @include user-select-none;
-    .tab-item {
+    > .tab-item {
       position: relative;
       cursor: pointer;
       @include init-border;
@@ -33,7 +33,7 @@ $default-size: $md;
     @include clearfix;
   }
 
-  .tab-content {
+  > .tab-content {
     .tab-pane{
       display: none;
       padding: $component-spacing;
@@ -50,10 +50,10 @@ $default-size: $md;
 
 
 .tab-border {
-  .tab-title {
+  > .tab-title {
     position: relative;
 
-    .tab-item {
+    > .tab-item {
       @include init-border;
       @include border-radius($border-radius $border-radius 0 0);
       border-color: $base-gray-dark;

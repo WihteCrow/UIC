@@ -75,6 +75,7 @@ $default-size: $md;
     .icon {
       width: map_get($obj, fz);
       height:map_get($obj, fz);
+      cursor: pointer
     }
 
     > .icon {

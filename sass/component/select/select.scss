@@ -48,11 +48,13 @@ $default-size: $md;
     overflow-y: auto;
     @include layer-index(1);
     @include select-items-style($default);
+    @include box-shadow(0, 0, 8px, rgba(0,0,0,0.15));
     .select-item {
       @include features-size(map_get($default-size, vertical), map_get($default-size, horizontal) - 1px, map_get($default-size, fz), map_get($default-size, lh));
 
       &.active, &:hover, &:active, &:focus {
-        background-color: map_get($hover, bg-color);
+        background-color: $base-blue-light;
+        color: $base-withe;
       }
 
       &.disabled {
@@ -103,6 +105,7 @@ $default-size: $md;
 // 选框尺寸
 @each $type, $obj in $select-size {
   .select.select-#{$type} {
+    height: map_get($obj, vertical) * 2 + map_get($obj, lh) + 2px;
     .selected-bar {
       @include features-size(map_get($obj, vertical), map_get($obj, horizontal), map_get($obj, fz), map_get($obj, lh));
     }

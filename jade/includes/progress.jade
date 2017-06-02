@@ -3,53 +3,26 @@
         :markdown
             ##progress bar
 .doc-section
-    .markdown-body
-        :markdown
-            ###类型
-            - `progress-bar-primary`
-            - `progress-bar-success`
-            - `progress-bar-info`
-            - `progress-bar-warn`
-            - `progress-bar-danger`
-            - `progress-bar-stripe`
-            - `.active` 带动画效果
     .example
-        .progress
-            .progress-bar.progress-bar-primary(style='width: 20%')
-        .progress
-            .progress-bar.progress-bar-success(style='width: 40%') 40%
-        .progress
-            .progress-bar.progress-bar-info(style='width: 60%')
-        .progress
-            .progress-bar.progress-bar-warn(style='width: 80%')
-        .progress
-            .progress-bar.progress-bar-danger(style='width: 100%')
-        .progress
-            .progress-bar.progress-bar-danger.progress-bar-stripe(style='width: 100%')
-        .progress
-            .progress-bar.progress-bar-danger.progress-bar-stripe.active(style='width: 100%')
+        .example-block
+            .progress
+                .progress-bar.progress-primary(style='width: 20%')
+        .example-block
+            .progress
+                .progress-bar.progress-success(style='width: 40%') 40%
+        .example-block
+            .progress
+                .progress-bar.progress-info(style='width: 60%')
+        .example-block
+            .progress
+                .progress-bar.progress-warn(style='width: 80%')
+        .example-block
+            .progress
+                .progress-bar.progress-danger(style='width: 100%')
+        .example-block
+            .progress
+                .progress-bar.progress-danger.progress-stripe(style='width: 100%')
+        .example-block
+            .progress
+                .progress-bar.progress-danger.progress-stripe.active(style='width: 100%')
     .highlight
-        pre
-            code.lang-html
-                :highlight
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" style="width: 20%;"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" style="width: 40%;">40%</div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" style="width: 60%;"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warn" style="width: 80%;"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger" style="100%;"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger progress-bar-stripe" style="100%;"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger progress-bar-stripe active" style="100%;"></div>
-                    </div>

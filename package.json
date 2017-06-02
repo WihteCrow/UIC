@@ -15,6 +15,7 @@
     "button"
   ],
   "dependencies": {
+    "echarts": "^3.5.4",
     "github-markdown-css": "^2.0.10",
     "grunt-css-docs": "^1.1.5",
     "highlight.js": "^8.8.0",

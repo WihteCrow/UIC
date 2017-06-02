@@ -1,0 +1,58 @@
+@import "../../variables/global";
+@import "compass/css3";
+
+$progress-skin: (primary, $primary),
+        (info, $info),
+        (success, $success),
+        (warn, $warn),
+        (danger, $danger);
+
+@-webkit-keyframes progress-bar-stripe {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripe {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+
+.progress {
+  height: 10px;
+  overflow: hidden;
+  background-color: #F2F3F5;
+}
+
+.progress-shadow {
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+
+  .progress-bar {
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  }
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 12px;
+  color: $base-withe;
+  text-align: center;
+  background-color: #F2F3F5;
+  transition: width .6s ease;
+  &.active {
+    animation: progress-bar-stripe 2s linear infinite;
+  }
+}
+
+
+// 皮肤
+@each $type, $obj in $progress-skin {
+  $default: map_get($obj, default);
+  .progress .progress-#{$type} {
+    background-color: map_get($default, bg-color);
+  }
+}

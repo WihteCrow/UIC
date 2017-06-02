@@ -2,6 +2,7 @@
 @import "global";
 
 
+@import "component/grid/grid";
 @import "component/badge/badge";
 @import "component/button/button";
 @import "component/message/message";
@@ -15,7 +16,10 @@
 @import "component/panel/panel";
 @import "component/tab/tab";
 @import "component/media/media";
+@import "component/progress/progress";
 
 @import "brand/menu";
 @import "brand/content-header";
 @import "brand/charts";
+
+@import "mixins/animate";

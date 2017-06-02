@@ -34,7 +34,10 @@ $menu-active-border-width: 4px;
       display: none;
       line-height: $menu-lh;
       font-size: $font-size-base;
-      padding-left: $menu-icon-space * 2 + $menu-icon-size - $menu-active-border-width;
+      > a{
+        display: block;
+        padding-left: $menu-icon-space * 2 + $menu-icon-size;
+      }
     }
 
     &.active {
