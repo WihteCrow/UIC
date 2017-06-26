@@ -10,11 +10,17 @@ $menu-active-border-width: 4px;
 
 .menu {
   background-color: $base-withe;
-  color: $base-black-light;
+  color: $base-black;
   .menu-title {
     font-size: 14px;
     line-height: $menu-lh;
+    height: $menu-lh;
+    overflow: hidden;
     cursor: pointer;
+
+    >span {
+      @include word-break;
+    }
 
     .icon {
       width: $menu-icon-size;
@@ -34,15 +40,21 @@ $menu-active-border-width: 4px;
       display: none;
       line-height: $menu-lh;
       font-size: $font-size-base;
+      height: $menu-lh;
+      overflow: hidden;
       > a{
         display: block;
+        @include word-break;
         padding-left: $menu-icon-space * 2 + $menu-icon-size;
       }
     }
 
-    &.active {
+    &.current {
       border-color: $base-blue;
-      background-color: $base-gray-light;
+    }
+
+    &.active {
+      background-color: $base-gray;
 
       .menu-title {
         .icon {
@@ -52,13 +64,13 @@ $menu-active-border-width: 4px;
 
       > li {
         display: block;
-        color: $base-black-light;
+        color: $base-black;
         &.active {
           color: $base-blue;
         }
 
         a {
-          color: $base-black-light;
+          color: $base-black;
           text-decoration: none;
         }
 

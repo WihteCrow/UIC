@@ -1,0 +1,16 @@
+@import "../../mixins/utils";
+
+@mixin list-items-style($obj) {
+  color: map_get($obj, ft-color);
+  background-color: map_get($obj, bg-color);
+  @include init-border;
+  border-color: $base-gray-dark;
+
+  .select-item {
+    border-bottom: 1px solid $base-gray-dark;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

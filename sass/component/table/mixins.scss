@@ -119,6 +119,14 @@
     font-weight: bolder;
     color: $base-black;
     padding: $table-th-vertical $table-th-horizontal;
+
+    &.sort {
+      cursor: pointer;
+      .icon{
+        width: $font-size-base;
+        height: $font-size-base;
+      }
+    }
   }
 
   td {

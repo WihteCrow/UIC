@@ -82,8 +82,8 @@ $default-size: $md;
 // 尺寸
 @each $type, $obj, $space in $tab-size {
   .tab.tab-line-#{$type} {
-    .tab-title {
-      .tab-item {
+    > .tab-title {
+      > .tab-item {
         @include tab-line-size(map_get($obj, vertical),
                 map_get($obj, horizontal),
                 map_get($obj, fz),
@@ -93,8 +93,8 @@ $default-size: $md;
   }
 
   .tab.tab-#{$type} {
-    .tab-title {
-      .tab-item {
+    > .tab-title {
+      > .tab-item {
         @include features-size(map_get($obj, vertical),
                 map_get($obj, horizontal),
                 map_get($obj, fz),

@@ -28,6 +28,7 @@ $default-size: $md;
     .icon {
       width: $font-size-base;
       height: $font-size-base;
+      display: block;
     }
   }
 
@@ -53,6 +54,10 @@ $default-size: $md;
       margin-left: 0;
       @include border-radius($btn-border-radius);
       margin-right: $features-spacing;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
     @include clearfix;
   }
@@ -117,6 +122,10 @@ a.btn{
             map_get($obj, horizontal),
             map_get($obj, fz),
             map_get($obj, lh));
+    .icon {
+      width: map_get($obj, fz);
+      height: map_get($obj, fz);
+    }
     @if($type != 'single') {
       &.btn-single {
         padding-top: map_get($obj, vertical);

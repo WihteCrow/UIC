@@ -5,7 +5,7 @@ $tag-secondary: (
         default: (
                 bd-color: #F2F3F5,
                 bg-color: #F2F3F5,
-                ft-color: #7B7C7D
+                ft-color: $base-black-light
         )
 );
 
@@ -13,6 +13,6 @@ $tag-info:(
   default: (
           bd-color: $base-gray,
           bg-color: $base-black,
-          ft-color: $base-black
+          ft-color: $base-black-light
   )
 )

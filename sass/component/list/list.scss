@@ -1,0 +1,40 @@
+@import "mixins";
+@import "variables";
+
+$default: map_get($info, default);
+$hover: map_get($info, hover);
+
+$select-size: (lg, $lg), (md, $md), (sm, $sm);
+$default-size: $md;
+
+// TODO
+// 字体大小没有想到好的方案
+// 统一处理`list`风格
+.list{
+  position: relative;
+  text-align: left;
+  @include layer-index(1);
+  @include list-items-style($default);
+  .list-item {
+    @include features-size(map_get($default-size, vertical), map_get($default-size, horizontal) - 1px, map_get($default-size, fz), map_get($default-size, lh));
+
+    &.active, &:hover, &:active, &:focus {
+      background-color: $base-blue-light;
+      color: $base-withe;
+    }
+
+    &.disabled {
+      @include disabled
+    }
+  }
+}
+
+
+// 选框尺寸
+@each $type, $obj in $select-size {
+  .list {
+    .list-item {
+      @include features-size(map_get($obj, vertical), map_get($obj, horizontal) - 1px, map_get($obj, fz), map_get($obj, lh));
+    }
+  }
+}

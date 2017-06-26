@@ -16,7 +16,7 @@ $base-blue-darker-dark: #0f82b6; // 按钮操作色
 
 // 黑色系
 $base-black: #333333; // 文字主色
-$base-black-light: #787878; // 辅助文字色
+$base-black-light: #666666; // 辅助文字色
 $base-black-lighter: #999999; // 辅助文字色
 $base-black-lighter-light: #c4c4c4; // 禁止按钮文字颜色
 
@@ -37,7 +37,7 @@ $base-gray-dark: #dcdcdc; // 描边色 禁用描边色
 $base-gray-darker: #dcdcdc; // 侧边栏滚动条色
 
 //字体
-$font-family: SimSun, Arial, "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+$font-family: tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
 $font-size-base: 12px;
 $font-size-lg: 16px;
 $font-size-md: 14px;
@@ -155,7 +155,7 @@ $link: (
         default: (
                 bg-color: transparent,
                 bd-color: transparent,
-                ft-color: $base-black
+                ft-color: $base-black-light
         ),
         hover: (
                 bg-color: transparent,
